@@ -1,11 +1,14 @@
 import { FormattedMessage } from 'react-intl';
 
 export const Summary = () => (
-  <section className="mb-8">
-    <h2 className="text-2xl font-bold mb-2">
+  <section 
+    aria-labelledby="summary-title"
+    className="summary-section"
+  >
+    <h2 id="summary-title" className="visually-hidden">
       <FormattedMessage id="summary.title" />
     </h2>
-    <p className="text-gray-700">
+    <p role="contentinfo">
       <FormattedMessage id="summary.description" />
     </p>
   </section>

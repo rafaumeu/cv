@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 interface SkillCategoryProps {
   title: React.ReactNode;
@@ -22,7 +23,7 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) =
             key={index}
             className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-sm"
           >
-            {skill}
+            <FormattedMessage id={skill} />
           </span>
         ))}
       </div>

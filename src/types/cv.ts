@@ -22,6 +22,7 @@ export interface Certification {
   year: number;
   skills: string[];
   link?: string;
+  hours: number;
 }
 
 export interface Language {

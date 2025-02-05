@@ -55,5 +55,50 @@ export default {
   'languages.portuguese': 'Portuguese',
   'languages.english': 'English',
   'languages.level.native': 'Native',
-  'languages.level.intermediate': 'Intermediate - Technical'
+  'languages.level.intermediate': 'Intermediate - Technical',
+
+  'skills.typescript': 'TypeScript',
+  'skills.reactjs': 'React.js',
+  'skills.nodejs': 'Node.js',
+
+  'education.self-taught': 'Self-Taught Developer',
+  'education.web-development': 'Web Development & Software Engineering',
+  'education.period': 'Jan 2024 - Present',
+  'education.degree': 'Self-Taught Developer',
+  'education.focus': 'Web Development & Software Engineering',
+
+  'certifications.react-fundamentals': 'React Fundamentals',
+  'certifications.nodejs-course': 'Node.js with Clean Architecture',
+  'certifications.hours': 'hours',
+  'certifications.view-certificate': 'View certificate',
+  'certifications.skills': 'Acquired skills',
+
+  // Skills
+  'skills.html5': 'HTML5',
+  'skills.css3': 'CSS3',
+  'skills.javascript': 'JavaScript',
+  'skills.tailwindcss': 'Tailwind CSS',
+  'skills.nextjs': 'Next.js',
+  'skills.expressjs': 'Express.js',
+  'skills.postgresql': 'PostgreSQL',
+  'skills.clean-architecture': 'Clean Architecture',
+  'skills.ddd': 'DDD (Domain-Driven Design)',
+  'skills.rest-apis': 'REST APIs',
+  'skills.jwt-auth': 'JWT Authentication',
+  'skills.fastify': 'Fastify',
+  'skills.prisma': 'Prisma',
+  'skills.solid': 'SOLID',
+  'skills.design-patterns': 'Design Patterns',
+  'skills.nestjs': 'NestJs',
+  'skills.git-flow': 'Git Flow',
+  'skills.github-actions': 'GitHub Actions',
+  'skills.pull-requests': 'Pull Requests',
+  'skills.code-review': 'Code Review',
+  'skills.branch-management': 'Branch Management',
+  'skills.commit-conventions': 'Commit Conventions',
+  'skills.docker': 'Docker',
+  'skills.cicd': 'CI/CD',
+
+  // Certifications
+  'certifications.issuer': 'Rocketseat',
 }

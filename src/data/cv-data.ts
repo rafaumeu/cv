@@ -31,7 +31,7 @@ export const projects = [
   {
     title: 'projects.pizzashop.title',
     description: 'projects.pizzashop.description',
-    skills: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+    skills: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js'],
     highlights: [
       'projects.pizzashop.highlight1',
       'projects.pizzashop.highlight2',
@@ -53,49 +53,77 @@ export const projects = [
 ];
 
 export const skills = {
-  'currentlyLearning': ['TypeScript', 'React.js', 'Node.js', 'Express.js', 'PostgreSQL'],
-  'frontend': ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Next.js'],
-  'backend': ['Node.js', 'TypeScript', 'Clean Architecture', 'DDD', 'REST APIs', 'JWT Authentication', 'Fastify', 'Prisma', 'SOLID', 'Design Patterns', 'NestJs'],
+  'currentlyLearning': [
+    'skills.typescript',
+    'skills.reactjs',
+    'skills.nodejs',
+    'skills.expressjs',
+    'skills.postgresql'
+  ],
+  'frontend': [
+    'skills.html5',
+    'skills.css3',
+    'skills.javascript',
+    'skills.tailwindcss',
+    'skills.nextjs'
+  ],
+  'backend': [
+    'skills.nodejs',
+    'skills.typescript',
+    'skills.clean-architecture',
+    'skills.ddd',
+    'skills.rest-apis',
+    'skills.jwt-auth',
+    'skills.fastify',
+    'skills.prisma',
+    'skills.solid',
+    'skills.design-patterns',
+    'skills.nestjs'
+  ],
   'version control & devops': [
-    'Git Flow', 
-    'GitHub Actions',
-    'Pull Requests',
-    'Code Review',
-    'Branch Management',
-    'Commit Conventions',
-    'Docker', 
-    'CI/CD'
+    'skills.git-flow',
+    'skills.github-actions',
+    'skills.pull-requests',
+    'skills.code-review',
+    'skills.branch-management',
+    'skills.commit-conventions',
+    'skills.docker',
+    'skills.cicd'
   ]
 };
 
 export const certifications = [
   {
-    title: 'React Fundamentals',
-    issuer: 'Rocketseat',
+    title: 'certifications.react-fundamentals',
+    issuer: 'certifications.issuer',
     year: 2024,
     hours: 40,
-    skills: ['React.js', 'JavaScript', 'Web Development'],
-    link: 'https://app.rocketseat.com.br/certificates/ed628e7f-2f71-40fd-a7d8-1577c5b5e381' // New link property
+    skills: [
+      'skills.reactjs',
+      'skills.javascript',
+      'skills.typescript'
+    ],
+    link: 'https://app.rocketseat.com.br/certificates/ed628e7f-2f71-40fd-a7d8-1577c5b5e381'
   },
   {
-    title: 'Node.js',
-    issuer: 'Rocketseat',
+    title: 'certifications.nodejs-course',
+    issuer: 'certifications.issuer',
     year: 2024,
     hours: 50,
     skills: [
-      'Node.js',
-      'TypeScript',
-      'Clean Architecture',
-      'DDD',
-      'REST APIs',
-      'JWT Authentication',
-      'Fastify',
-      'Prisma',
-      'SOLID',
-      'Design Patterns'
+      'skills.nodejs',
+      'skills.typescript',
+      'skills.clean-architecture',
+      'skills.ddd',
+      'skills.rest-apis',
+      'skills.jwt-auth',
+      'skills.fastify',
+      'skills.prisma',
+      'skills.solid',
+      'skills.design-patterns'
     ],
-    link: 'https://app.rocketseat.com.br/certificates/ad52c13b-44e5-4cfa-aced-0db19184e28e' // New link property
-  },
+    link: 'https://app.rocketseat.com.br/certificates/ad52c13b-44e5-4cfa-aced-0db19184e28e'
+  }
 ];
 
 export const languages = [
@@ -110,8 +138,8 @@ export const languages = [
 ];
 
 export const education = {
-  degree: 'Self-Taught Developer',
-  focus: 'Web Development & Software Engineering',
-  period: 'Jan 2024 - Present',
+  degree: 'education.degree',
+  focus: 'education.focus',
+  period: 'education.period',
   highlights: []
 };

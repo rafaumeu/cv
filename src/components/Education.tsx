@@ -19,15 +19,19 @@ export const Education: React.FC<EducationProps> = ({ education }) => (
     <Card>
       <CardContent className="pt-6">
         <h3 className="font-bold text-lg">
-          <FormattedMessage id="education.degree" defaultMessage={education.degree} />
+          <FormattedMessage id={education.degree} />
         </h3>
         <p className="text-blue-600">
-          <FormattedMessage id="education.focus" defaultMessage={education.focus} />
+          <FormattedMessage id={education.focus} />
         </p>
-        <p className="text-gray-600 mb-2">{education.period}</p>
+        <p className="text-gray-600 mb-2">
+          <FormattedMessage id={education.period} />
+        </p>
         <ul className="list-disc list-inside text-gray-700">
           {education.highlights.map((highlight, index) => (
-            <li key={index}>{highlight}</li>
+            <li key={index}>
+              <FormattedMessage id={highlight} />
+            </li>
           ))}
         </ul>
       </CardContent>
