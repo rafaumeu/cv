@@ -1,0 +1,31 @@
+.logo-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 150px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .logo-container {
+    max-width: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-container {
+    max-width: 180px;
+  }
+}
+
+/* Suporte para dark mode */
+@media (prefers-color-scheme: dark) {
+  .logo-container img[src*=".svg"] {
+    filter: brightness(0) invert(1);
+  }
+}
