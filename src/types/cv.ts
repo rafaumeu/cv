@@ -12,6 +12,8 @@ export interface Project {
   description: string;
   skills: string[];
   highlights?: string[];
+  link?: string;
+  github?: string;
 }
 
 export interface Certification {
@@ -19,6 +21,7 @@ export interface Certification {
   issuer: string;
   year: number;
   skills: string[];
+  link?: string;
 }
 
 export interface Language {

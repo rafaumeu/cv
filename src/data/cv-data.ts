@@ -1,27 +1,27 @@
 export const experiences = [
   {
-    role: 'Full Stack Developer - Self-Taught',
-    company: 'Self-Study & Personal Projects',
+    role: 'experience.role.fullstack',
+    company: 'experience.company.self',
     period: 'Jan 2024 - Present',
     location: 'Remote',
     achievements: [
-      'Developed 3 full-stack applications using React.js and Node.js, averaging 2000 lines of code each',
-      'Completed 120 hours of programming courses, documented with certificates',
-      'Contributed with 15 pull requests across 3 different open-source projects on GitHub',
-      'Implemented CI/CD pipeline with 85% test coverage in 2 personal projects',
-      'Built a task management system with 3 user permission levels'
+      'experience.achievements.1',
+      'experience.achievements.2',
+      'experience.achievements.3',
+      'experience.achievements.4',
+      'experience.achievements.5'
     ],
-    skills: ['React.js', 'Node.js', 'TypeScript', 'Git', 'CI/CD', 'MongoDB']
+    skills: ['React.js', 'Node.js', 'TypeScript', 'Git', 'CI/CD', 'Clean Architecture']
   },
   {
-    role: 'Customer Experience Specialist',
-    company: 'Teleperformance',
+    role: 'experience.role.customer',
+    company: 'experience.company.teleperformance',
     period: 'Jul 2023 - Dec 2023',
     location: 'Remote',
     achievements: [
-      'Handled an average of 40 customers daily with 92% resolution rate',
-      'Maintained customer satisfaction score of 4.7/5.0',
-      'Participated in 12 team meetings for process improvement'
+      'experience.achievements.6',
+      'experience.achievements.7',
+      'experience.achievements.8'
     ],
     skills: ['Communication', 'Problem Solving', 'Team Collaboration', 'Customer Support']
   }
@@ -29,42 +29,43 @@ export const experiences = [
 
 export const projects = [
   {
-    title: 'Pizza Shop Website',
-    description: 'E-commerce platform for pizza ordering with real-time tracking',
+    title: 'projects.pizzashop.title',
+    description: 'projects.pizzashop.description',
     skills: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     highlights: [
-      'Responsive interface with interactive cart tested across 3 major browsers',
-      'Stripe API integration processing test orders',
-      'Reduced initial load time by 40% through code splitting'
-    ]
+      'projects.pizzashop.highlight1',
+      'projects.pizzashop.highlight2',
+      'projects.pizzashop.highlight3'
+    ],
+    link: 'https://pizza-shop-five-sigma.vercel.app/'
   },
   {
-    title: 'Task Management App',
-    description: 'Full-stack project for task management with authentication',
-    skills: ['TypeScript', 'Node.js', 'Express.js', 'MongoDB'],
-    highlights: [
-      'Authentication system with JWT and bcrypt password encryption',
-      'REST API with 4 user permission levels',
-      'Optimized queries reducing response time by 35%'
-    ]
-  },
-  {
-    title: 'Social Media Feed',
-    description: 'Frontend project showcasing an interactive social media feed',
+    title: 'projects.social.title',
+    description: 'projects.social.description',
     skills: ['React.js', 'TypeScript', 'Tailwind CSS'],
     highlights: [
-      'Dynamic feed with likes system and nested comments',
-      'Image lazy loading reducing bandwidth usage by 45%',
-      'Smooth animations with Framer Motion maintaining 60fps'
-    ]
+      'projects.social.highlight1',
+      'projects.social.highlight2',
+      'projects.social.highlight3'
+    ],
+    link: 'https://ignitefeeddev.netlify.app/'
   }
 ];
 
 export const skills = {
-  'Currently Learning': ['TypeScript', 'React.js', 'Node.js', 'Express.js', 'PostgreSQL'],
-  'Frontend': ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Next.js'],
-  'Backend': ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'REST APIs'],
-  'DevOps & Tools': ['Git', 'GitHub Actions', 'Docker', 'VS Code', 'npm', 'CI/CD']
+  'currentlyLearning': ['TypeScript', 'React.js', 'Node.js', 'Express.js', 'PostgreSQL'],
+  'frontend': ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS', 'Next.js'],
+  'backend': ['Node.js', 'TypeScript', 'Clean Architecture', 'DDD', 'REST APIs', 'JWT Authentication', 'Fastify', 'Prisma', 'SOLID', 'Design Patterns', 'NestJs'],
+  'version control & devops': [
+    'Git Flow', 
+    'GitHub Actions',
+    'Pull Requests',
+    'Code Review',
+    'Branch Management',
+    'Commit Conventions',
+    'Docker', 
+    'CI/CD'
+  ]
 };
 
 export const certifications = [
@@ -73,7 +74,8 @@ export const certifications = [
     issuer: 'Rocketseat',
     year: 2024,
     hours: 40,
-    skills: ['React.js', 'JavaScript', 'Web Development']
+    skills: ['React.js', 'JavaScript', 'Web Development'],
+    link: 'https://app.rocketseat.com.br/certificates/ed628e7f-2f71-40fd-a7d8-1577c5b5e381' // New link property
   },
   {
     title: 'Node.js',
@@ -91,20 +93,25 @@ export const certifications = [
       'Prisma',
       'SOLID',
       'Design Patterns'
-    ]
+    ],
+    link: 'https://app.rocketseat.com.br/certificates/ad52c13b-44e5-4cfa-aced-0db19184e28e' // New link property
   },
 ];
 
 export const languages = [
-  { name: 'Portuguese', level: 'Native' },
-  { name: 'English', level: 'Intermediate - Technical' }
+  { 
+    name: 'languages.portuguese', 
+    level: 'languages.level.native' 
+  },
+  { 
+    name: 'languages.english', 
+    level: 'languages.level.intermediate' 
+  }
 ];
 
 export const education = {
   degree: 'Self-Taught Developer',
   focus: 'Web Development & Software Engineering',
   period: 'Jan 2024 - Present',
-  highlights: [
-    
-  ]
+  highlights: []
 };

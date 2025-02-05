@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { FormattedMessage } from 'react-intl';
 
 interface EducationProps {
   education: {
@@ -12,11 +13,17 @@ interface EducationProps {
 
 export const Education: React.FC<EducationProps> = ({ education }) => (
   <section className="mb-8">
-    <h2 className="text-2xl font-bold mb-4">Education</h2>
+    <h2 className="text-2xl font-bold mb-4">
+      <FormattedMessage id="education.title" />
+    </h2>
     <Card>
       <CardContent className="pt-6">
-        <h3 className="font-bold text-lg">{education.degree}</h3>
-        <p className="text-blue-600">{education.focus}</p>
+        <h3 className="font-bold text-lg">
+          <FormattedMessage id="education.degree" defaultMessage={education.degree} />
+        </h3>
+        <p className="text-blue-600">
+          <FormattedMessage id="education.focus" defaultMessage={education.focus} />
+        </p>
         <p className="text-gray-600 mb-2">{education.period}</p>
         <ul className="list-disc list-inside text-gray-700">
           {education.highlights.map((highlight, index) => (

@@ -2,12 +2,12 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MapPin } from 'lucide-react';
 import { Experience } from '@/types/cv';
+import { FormattedMessage } from 'react-intl';
 
 export const ExperienceItem: React.FC<Experience> = ({
   role,
   company,
   period,
-  location,
   achievements,
   skills,
 }) => (
@@ -15,8 +15,12 @@ export const ExperienceItem: React.FC<Experience> = ({
     <CardContent className="pt-6">
       <div className="flex justify-between items-start mb-4">
         <div>
-          <h3 className="font-bold text-lg text-gray-900">{role}</h3>
-          <p className="text-blue-600">{company}</p>
+          <h3 className="font-bold text-lg text-gray-900">
+            <FormattedMessage id={role} />
+          </h3>
+          <p className="text-blue-600">
+            <FormattedMessage id={company} />
+          </p>
         </div>
         <div className="text-right text-sm text-gray-600">
           <div className="flex items-center gap-1">
@@ -25,13 +29,17 @@ export const ExperienceItem: React.FC<Experience> = ({
           </div>
           <div className="flex items-center gap-1">
             <MapPin size={16} />
-            <span>{location}</span>
+            <span>
+              <FormattedMessage id="experience.remote" />
+            </span>
           </div>
         </div>
       </div>
       <ul className="space-y-2 mb-4">
         {achievements.map((achievement, index) => (
-          <li key={index} className="text-gray-700">{achievement}</li>
+          <li key={index} className="text-gray-700">
+            <FormattedMessage id={achievement} />
+          </li>
         ))}
       </ul>
       <div className="flex flex-wrap gap-2">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { SkillCategory } from './SkillCategory';
 import { CertificationList } from './CertificationList';
 import { LanguageList } from './LanguageList';
@@ -16,11 +17,17 @@ export const Skills: React.FC<SkillsProps> = ({
   languages,
 }) => (
   <section className="mb-8">
-    <h2 className="text-2xl font-bold mb-4">Skills & Qualifications</h2>
+    <h2 className="text-2xl font-bold mb-4">
+      <FormattedMessage id="skills.title" />
+    </h2>
     
     <div className="space-y-6">
       {Object.entries(skills).map(([category, skillList]) => (
-        <SkillCategory key={category} title={category} skills={skillList} />
+        <SkillCategory 
+          key={category} 
+          title={<FormattedMessage id={`skills.${category}`} />} 
+          skills={skillList} 
+        />
       ))}
       
       <CertificationList certifications={certifications} />
