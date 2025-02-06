@@ -10,28 +10,6 @@ export default defineConfig({
       jsxImportSource: 'react',
     }),
     tsconfigPaths(),
-    {
-      name: 'og-middleware',
-      configureServer(server) {
-        server.middlewares.use(async (req, res, next) => {
-          if (req.url === '/api/og') {
-            try {
-              const { generateOgImage } = await import('./src/components/og-image.tsx');
-              const image = await generateOgImage();
-              res.setHeader('Content-Type', 'image/png');
-              res.setHeader('Cache-Control', 'public, max-age=86400');
-              res.end(image);
-            } catch (e) {
-              console.error(e);
-              res.statusCode = 500;
-              res.end('Failed to generate image');
-            }
-          } else {
-            next();
-          }
-        });
-      }
-    }
   ],
   resolve: {
     alias: {
@@ -51,7 +29,6 @@ export default defineConfig({
     postcss: './postcss.config.js',
   },
   esbuild: {
-    jsxInject: `import React from 'react'`,
     jsx: 'automatic',
   },
 });

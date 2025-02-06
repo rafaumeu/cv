@@ -1,23 +1,14 @@
 {
+  "version": 2,
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
   "functions": {
-    "api/og": {
-      "memory": 3008,
-      "maxDuration": 30
+    "api/og.tsx": {
+      "runtime": "@vercel/node@3.0.0",
+      "memory": 1024
     }
   },
-  "headers": [
-    {
-      "source": "/api/og",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/png"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800"
-        }
-      ]
-    }
-  ]
+  "env": {
+    "NODE_VERSION": "18.x"
+  }
 }
