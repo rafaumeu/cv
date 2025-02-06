@@ -1,75 +1,91 @@
 import { ImageResponse } from '@vercel/og';
 
 export const config = {
-  runtime: 'edge'
+  runtime: 'edge',
 };
 
 export default async function handler() {
   try {
+    const interBold = await fetch(
+      new URL('../../assets/fonts/Inter-Bold.ttf', import.meta.url)
+    ).then((res) => res.arrayBuffer());
+
     return new ImageResponse(
       (
         <div
           style={{
-            background: 'linear-gradient(to right, #0066cc, #3182ce)',
-            width: '100%',
             height: '100%',
+            width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '40px',
+            backgroundColor: '#fff',
+            padding: '40px 60px',
           }}
         >
-          <img
-            src="https://github.com/rafaumeu.png"
-            alt="Rafael Dias Zendron"
+          <div
             style={{
-              width: '150px',
-              height: '150px',
-              borderRadius: '50%',
-              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '40px'
             }}
-          />
-          <h1 style={{ 
-            color: 'white', 
-            fontSize: '60px',
-            marginBottom: '10px',
-          }}>
-            Rafael Dias Zendron
-          </h1>
-          <h2 style={{ 
-            color: 'rgba(255,255,255,0.9)',
-            fontSize: '35px',
-            marginBottom: '30px',
-          }}>
-            Desenvolvedor Full Stack & Arquiteto de Software
-          </h2>
-          <div style={{
-            display: 'flex',
-            gap: '20px',
-          }}>
-            {['React', 'Node.js', 'TypeScript', 'Clean Architecture'].map((tech) => (
-              <span
-                key={tech}
+          >
+            <img
+              src="https://github.com/rafaumeu.png"
+              alt="Profile"
+              style={{
+                width: '160px',
+                height: '160px',
+                borderRadius: '80px',
+              }}
+            />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+              }}
+            >
+              <h1
                 style={{
-                  background: 'rgba(255,255,255,0.1)',
-                  padding: '10px 20px',
-                  borderRadius: '20px',
-                  color: 'white',
+                  fontSize: '60px',
+                  fontFamily: 'Inter Bold',
+                  margin: 0,
+                  color: '#1a1a1a',
                 }}
               >
-                {tech}
-              </span>
-            ))}
+                Rafael Dias Zendron
+              </h1>
+              <h2
+                style={{
+                  fontSize: '32px',
+                  fontFamily: 'Inter',
+                  margin: 0,
+                  color: '#666666',
+                }}
+              >
+                Desenvolvedor Full Stack & Arquiteto de Software
+              </h2>
+            </div>
           </div>
         </div>
       ),
       {
         width: 1200,
         height: 630,
-      },
+        fonts: [
+          {
+            name: 'Inter Bold',
+            data: interBold,
+            style: 'normal',
+          },
+        ],
+      }
     );
   } catch (e) {
+    console.error(e);
     return new Response(`Failed to generate image`, {
       status: 500,
     });
