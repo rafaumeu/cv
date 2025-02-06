@@ -137,9 +137,11 @@ export const languages = [
   }
 ];
 
-export const education = {
-  degree: 'education.degree',
-  focus: 'education.focus',
-  period: 'education.period',
-  highlights: []
-};
+export const education = [
+  {
+    degree: "Desenvolvedor Full Stack",
+    institution: "Autodidata",
+    period: "2020 - Presente",
+    description: "Foco em desenvolvimento web com React, Node.js e TypeScript"
+  }
+];

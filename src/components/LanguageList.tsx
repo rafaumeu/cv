@@ -17,7 +17,7 @@ export const LanguageList: React.FC<LanguageListProps> = ({ languages }) => (
           <span>
             <FormattedMessage id={lang.name} />
           </span>
-          <span className="text-gray-600">
+          <span className="card-foreground">
             <FormattedMessage id={lang.level} />
           </span>
         </li>

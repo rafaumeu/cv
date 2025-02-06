@@ -1,4 +1,47 @@
 /* src/index.css */
+@import './styles/themes.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --text: #000000;
+    --primary: #0066cc;
+    --secondary: #4a5568;
+    --accent: #3182ce;
+    --error: #ff5555;
+    --success: #50fa7b;
+    --warning: #ffb86c;
+    --info: #8be9fd;
+    --card: #ffffff;
+    --card-foreground: #000000;
+    --border: #e2e8f0;
+    --link: #0066cc;
+  }
+
+  [data-theme="dark"] {
+    --background: #282a36;
+    --text: #f8f8f2;
+    --primary: #bd93f9;
+    --secondary: #6272a4;
+    --accent: #ff79c6;
+    --error: #ff5555;
+    --success: #50fa7b;
+    --warning: #ffb86c;
+    --info: #8be9fd;
+    --card: #44475a;
+    --card-foreground: #f8f8f2;
+    --border: #6272a4;
+    --link: #8be9fd;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text;
+  }
+}

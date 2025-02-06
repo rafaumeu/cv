@@ -20,7 +20,7 @@ export const CertificationList: React.FC<CertificationListProps> = ({
             <span className="font-medium">
               <FormattedMessage id={cert.title} />
             </span>
-            <span className="text-gray-600">
+            <span className="card-foreground">
               <FormattedMessage id={cert.issuer} /> • {cert.year} • {cert.hours} <FormattedMessage id="certifications.hours" />
             </span>
           </div>
