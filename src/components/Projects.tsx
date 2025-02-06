@@ -19,3 +19,5 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => (
     </div>
   </section>
 );
+
+export default Projects;

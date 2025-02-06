@@ -19,3 +19,5 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => (
     </div>
   </section>
 );
+
+export default Experience;

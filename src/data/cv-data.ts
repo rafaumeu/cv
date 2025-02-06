@@ -103,7 +103,7 @@ export const certifications = [
       'skills.javascript',
       'skills.typescript'
     ],
-    link: 'https://app.rocketseat.com.br/certificates/ed628e7f-2f71-40fd-a7d8-1577c5b5e381'
+    link: 'https://app.rocketseat.com.br/certificates/baac92e0-ec75-4543-aace-375b37b63ec8'
   },
   {
     title: 'certifications.nodejs-course',
@@ -139,9 +139,15 @@ export const languages = [
 
 export const education = [
   {
-    degree: "Desenvolvedor Full Stack",
-    institution: "Autodidata",
-    period: "2020 - Presente",
-    description: "Foco em desenvolvimento web com React, Node.js e TypeScript"
+    degree: 'education.degree.ads',
+    institution: 'education.institution.estacio',
+    period: 'education.period.ads',
+    description: 'education.focus.ads'
+  },
+  {
+    degree: 'education.degree.rocketseat',
+    institution: 'education.institution.rocketseat',
+    period: 'education.period.rocketseat',
+    description: 'education.focus.rocketseat'
   }
 ];
