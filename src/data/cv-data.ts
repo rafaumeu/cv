@@ -1,54 +1,76 @@
 export const experiences = [
   {
-    role: 'experience.role.fullstack',
-    company: 'experience.company.self',
-    period: 'Jan 2024 - Present',
-    location: 'Remote',
+    role: 'experience.role.expert',
+    company: 'experience.company.teleperformance',
+    period: 'experience.period.teleperformance',
+    location: 'experience.location.teleperformance',
     achievements: [
-      'experience.achievements.1',
-      'experience.achievements.2',
-      'experience.achievements.3',
-      'experience.achievements.4',
-      'experience.achievements.5'
+      'experience.achievements.teleperformance.0',
+      'experience.achievements.teleperformance.1',
+      'experience.achievements.teleperformance.2'
     ],
-    skills: ['React.js', 'Node.js', 'TypeScript', 'Git', 'CI/CD', 'Clean Architecture']
+    skills: ['Mediação', 'Resolução de Conflitos', 'Atendimento ao Cliente']
   },
   {
-    role: 'experience.role.customer',
-    company: 'experience.company.teleperformance',
-    period: 'Jul 2023 - Dec 2023',
-    location: 'Remote',
+    role: 'experience.role.production',
+    company: 'experience.company.debem',
+    period: 'experience.period.debem',
+    location: 'experience.location.debem',
     achievements: [
-      'experience.achievements.6',
-      'experience.achievements.7',
-      'experience.achievements.8'
+      'experience.achievements.debem.0',
+      'experience.achievements.debem.1',
+      'experience.achievements.debem.2'
     ],
-    skills: ['Communication', 'Problem Solving', 'Team Collaboration', 'Customer Support']
+    skills: ['Trabalho em Equipe', 'Processos Produtivos', 'Controle de Qualidade']
+  },
+  {
+    role: 'experience.role.analyst',
+    company: 'experience.company.tempo',
+    period: 'experience.period.tempo',
+    location: 'experience.location.tempo',
+    achievements: [
+      'experience.achievements.tempo.0',
+      'experience.achievements.tempo.1',
+      'experience.achievements.tempo.2',
+      'experience.achievements.tempo.3'
+    ],
+    skills: ['Atendimento ao Cliente', 'Análise de Dados', 'Retenção de Clientes']
   }
 ];
 
 export const projects = [
   {
-    title: 'projects.pizzashop.title',
-    description: 'projects.pizzashop.description',
-    skills: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+    title: 'projects.forum.title',
+    description: 'projects.forum.description',
+    skills: ['Node.js', 'TypeScript', 'DDD', 'Clean Architecture', 'PostgreSQL', 'Prisma'],
     highlights: [
-      'projects.pizzashop.highlight1',
-      'projects.pizzashop.highlight2',
-      'projects.pizzashop.highlight3'
+      'projects.forum.highlight1',
+      'projects.forum.highlight2',
+      'projects.forum.highlight3'
     ],
-    link: 'https://pizza-shop-five-sigma.vercel.app/'
+    link: 'https://github.com/rafaumeu/forum'
   },
   {
-    title: 'projects.social.title',
-    description: 'projects.social.description',
-    skills: ['React.js', 'TypeScript', 'Tailwind CSS'],
+    title: 'projects.inorbit.title',
+    description: 'projects.inorbit.description',
+    skills: ['React.js', 'TypeScript', 'TailwindCSS', 'Radix UI', 'React Query'],
     highlights: [
-      'projects.social.highlight1',
-      'projects.social.highlight2',
-      'projects.social.highlight3'
+      'projects.inorbit.highlight1',
+      'projects.inorbit.highlight2',
+      'projects.inorbit.highlight3'
     ],
-    link: 'https://ignitefeeddev.netlify.app/'
+    link: 'https://github.com/rafaumeu/inorbit-front'
+  },
+  {
+    title: 'projects.ignitecall.title',
+    description: 'projects.ignitecall.description',
+    skills: ['Next.js', 'TypeScript', 'Prisma', 'NextAuth.js', 'Google APIs'],
+    highlights: [
+      'projects.ignitecall.highlight1',
+      'projects.ignitecall.highlight2',
+      'projects.ignitecall.highlight3'
+    ],
+    link: 'https://github.com/rafaumeu/ignite-call'
   }
 ];
 
@@ -80,7 +102,7 @@ export const skills = {
     'skills.design-patterns',
     'skills.nestjs'
   ],
-  'version control & devops': [
+  'version': [
     'skills.git-flow',
     'skills.github-actions',
     'skills.pull-requests',

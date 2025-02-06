@@ -1,33 +1,37 @@
 export default {
+  // Header
   'header.about': 'Perfil Profissional',
   'header.experience': 'Experiência Profissional',
   'header.projects': 'Projetos Significativos',
   'header.skills': 'Competências Técnicas',
   'header.education': 'Formação Acadêmica',
-  'header.role': 'Arquiteto de Software Full Stack',
+  'header.role': 'Desenvolvedor Full Stack Jr.',
 
+  // Summary
   'summary.title': 'Perfil Profissional',
-  'summary.description': 'Arquiteto de software full-stack com expertise em React e Node.js, destacando-se na implementação de arquitetura hexagonal e padrões avançados de engenharia de software. Histórico comprovado na otimização de performance em larga escala e orquestração de pipelines de integração/entrega contínua. Defensor intransigente de princípios SOLID e practices de desenvolvimento ágil, com notável portfólio de contribuições para ecossistemas open-source.',
-  
+  'summary.description': 'Desenvolvedor full-stack júnior com foco em React e Node.js, buscando constantemente aprimoramento através de estudos e projetos práticos. Experiência com TypeScript, APIs REST e práticas modernas de desenvolvimento. Comprometido com código limpo e aprendizado contínuo, com interesse especial em arquitetura de software e padrões de projeto.',
+
+  // Skills
   'skills.title': 'Competências Técnicas & Especializações',
   'skills.certifications': 'Certificações Profissionais',
   'skills.languages': 'Proficiência em Idiomas',
   'skills.currentlyLearning': 'Estudos Técnicos Avançados',
-  'skills.frontend': 'Desenvolvimento Frontend',
-  'skills.backend': 'Arquitetura Backend',
-  'skills.version control & devops': 'Controle de Versão & Infraestrutura DevOps',
-  'skills.typescript': 'Arquitetura TypeScript',
-  'skills.reactjs': 'Ecossistema React.js',
-  'skills.nodejs': 'Infraestrutura Node.js',
-  'skills.expressjs': 'Framework Express.js',
-  'skills.postgresql': 'Gerenciamento de Banco de Dados PostgreSQL',
+  'skills.category.frontend': 'Frontend',
+  'skills.category.backend': 'Backend',
+  'skills.category.devops': 'DevOps',
+  'skills.category.version': 'Controle de Versão & DevOps',
+  'skills.typescript': 'TypeScript',
+  'skills.reactjs': 'React.js',
+  'skills.nodejs': 'Node.js',
+  'skills.expressjs': 'Express.js',
+  'skills.postgresql': 'PostgreSQL',
   'skills.html5': 'Marcação Semântica HTML5',
   'skills.css3': 'Estilização Avançada CSS3',
   'skills.javascript': 'Engenharia JavaScript',
-  'skills.tailwindcss': 'Framework TailwindCSS',
-  'skills.nextjs': 'Framework Next.js',
-  'skills.clean-architecture': 'Princípios de Arquitetura Limpa',
-  'skills.ddd': 'Implementação DDD (Domain-Driven Design)',
+  'skills.tailwindcss': 'TailwindCSS',
+  'skills.nextjs': 'Next.js',
+  'skills.clean-architecture': 'Clean Architecture',
+  'skills.ddd': 'Domain-Driven Design',
   'skills.rest-apis': 'APIs REST',
   'skills.jwt-auth': 'Autenticação JWT',
   'skills.fastify': 'Fastify',
@@ -44,6 +48,7 @@ export default {
   'skills.docker': 'Docker',
   'skills.cicd': 'CI/CD',
 
+  // Education
   'education.title': 'Formação Acadêmica',
   'education.degree.ads': 'Graduação Tecnológica em Análise e Desenvolvimento de Sistemas',
   'education.institution.estacio': 'Universidade Estácio',
@@ -54,41 +59,60 @@ export default {
   'education.institution.rocketseat': 'Instituto de Tecnologia Rocketseat',
   'education.period.rocketseat': 'Novembro 2024 - Novembro 2026',
   'education.focus.rocketseat': 'Especialização avançada em desenvolvimento full-stack com foco em Node.js, TypeScript, APIs REST, Autenticação JWT, Testes de Integração e Testes de Carga',
-
+  // Experience
   'experience.title': 'Experiência Profissional',
-  'experience.present': 'Presente',
-  'experience.remote': 'Ambiente Remoto',
-  'experience.role.fullstack': 'Engenheiro de Software Full Stack',
-  'experience.company.self': 'Iniciativas Independentes & Projetos Open Source',
-  'experience.role.customer': 'Especialista em Experiência do Cliente',
+  
+  // Teleperformance
   'experience.company.teleperformance': 'Teleperformance',
+  'experience.role.expert': 'Especialista em Interação',
+  'experience.period.teleperformance': 'Julho 2024 - Novembro 2024',
+  'experience.location.teleperformance': 'Remoto, Brasil',
+  'experience.achievements.teleperformance.0': 'Assistência a compradores e vendedores respondendo dúvidas e mediando conflitos',
+  'experience.achievements.teleperformance.1': 'Desenvolvimento de habilidades avançadas em mediação e resolução de conflitos',
+  'experience.achievements.teleperformance.2': 'Manutenção de alto índice de satisfação no atendimento ao cliente',
   
-  'experience.achievements.1': 'Concebeu e implementou três sistemas empresariais full-stack, totalizando aproximadamente 2000 linhas de código cada, incorporando padrões arquiteturais avançados',
-  'experience.achievements.2': 'Orquestrou pipeline de integração contínua alcançando cobertura de testes superior a 85%, garantindo integridade do código em produção',
-  'experience.achievements.3': 'Protagonizou 15 contribuições significativas para repositórios open-source de alta relevância',
-  'experience.achievements.4': 'Implementou otimizações arquiteturais resultando em ganho de performance de 40% através de técnicas avançadas de code splitting',
-  'experience.achievements.5': 'Arquitetou estratégia de carregamento progressivo reduzindo latência inicial em 45% através de implementação sofisticada de lazy loading',
-  'experience.achievements.6': 'Gerenciou portfolio de 40 clientes diários mantendo índice de resolução excepcional de 92%',
-  'experience.achievements.7': 'Estabeleceu novo benchmark de satisfação do usuário atingindo média de 4.7/5.0',
-  'experience.achievements.8': 'Liderou 12 workshops de otimização de processos e melhoria contínua',
 
+  'experience.role.production': 'Assistente de Produção de Tintas',
+  'experience.company.debem': 'De Bem Tintas',
+  'experience.period.debem': 'Fevereiro 2021 - Dezembro 2023',
+  'experience.location.debem': 'Jaú, São Paulo',
+  'experience.achievements.debem.0': 'Produção de produtos para acabamento na construção civil como massa PVA, massa acrílica e texturas',
+  'experience.achievements.debem.1': 'Participação ativa em equipe de produção com foco em qualidade e eficiência',
+  'experience.achievements.debem.2': 'Contribuição para otimização de processos produtivos',
+  
+
+  'experience.role.analyst': 'Analista de Atendimento ao Cliente',
+  'experience.company.tempo': 'Tempo USS',
+  'experience.period.tempo': 'Março 2015 - Junho 2020',
+  'experience.location.tempo': 'Barueri, Brasil',
+  'experience.achievements.tempo.0': 'Atendimento humanizado e excelente a clientes Tokyo Marine, esclarecendo dúvidas sobre serviços de seguros',
+  'experience.achievements.tempo.1': 'Colaboração com outros departamentos para garantir a melhor experiência possível aos segurados',
+  'experience.achievements.tempo.2': 'Atendimento a clientes Odonto Empresas, resolvendo consultas e realizando retenção de clientes',
+  'experience.achievements.tempo.3': 'Assistência a prestadores de serviços com recursos de pagamento',
+  
+
+  // Projects
   'projects.title': 'Projetos',
-  'projects.pizzashop.title': 'Sistema Enterprise de Gestão de Pedidos',
-  'projects.pizzashop.description': 'Plataforma full-stack escalável para gerenciamento de pedidos em tempo real',
-  'projects.pizzashop.highlight1': 'Implementação de sistema distribuído com arquitetura event-driven',
-  'projects.pizzashop.highlight2': 'Interface administrativa com análise de dados em tempo real',
-  'projects.pizzashop.highlight3': 'Integração robusta com gateway de pagamento enterprise',
-
-  'projects.social.title': 'Plataforma de Engajamento Social',
-  'projects.social.description': 'Implementação frontend de alta performance para rede social',
-  'projects.social.highlight1': 'Sistema sofisticado de feed com algoritmo proprietário de engagement',
-  'projects.social.highlight2': 'Otimização avançada de assets reduzindo consumo de banda em 45%',
-  'projects.social.highlight3': 'Framework de animações de alta performance mantendo consistentes 60fps',
-
-  'skills.category.frontend': 'Frontend',
-  'skills.category.backend': 'Backend',
-  'skills.category.devops': 'Controle de Versão & DevOps',
   
+  'projects.forum.title': 'Plataforma de Discussão com DDD',
+  'projects.forum.description': 'Sistema de fórum desenvolvido com Node.js e TypeScript, aplicando DDD e Clean Architecture para máxima escalabilidade.',
+  'projects.forum.highlight1': 'Arquitetura modular com princípios SOLID',
+  'projects.forum.highlight2': 'Sistema Q&A com gestão avançada de comentários',
+  'projects.forum.highlight3': 'Alta cobertura de testes garantindo confiabilidade',
+
+  'projects.inorbit.title': 'Sistema de Metas',
+  'projects.inorbit.description': 'Aplicação React moderna para gestão de metas com componentes acessíveis e integração eficiente.',
+  'projects.inorbit.highlight1': 'Interface responsiva com TailwindCSS e Radix UI',
+  'projects.inorbit.highlight2': 'Formulários avançados com React Hook Form',
+  'projects.inorbit.highlight3': 'Integração otimizada com React Query',
+
+  'projects.ignitecall.title': 'Sistema de Agendamentos',
+  'projects.ignitecall.description': 'Plataforma de agendamentos com integração Google Calendar e Meet.',
+  'projects.ignitecall.highlight1': 'Integração completa com serviços Google',
+  'projects.ignitecall.highlight2': 'Sistema inteligente de slots e conflitos',
+  'projects.ignitecall.highlight3': 'Autenticação OAuth 2.0 e perfis de usuário',
+
+  // Certifications
   'certifications.issuer': 'Rocketseat',
   'certifications.year': '2024',
   'certifications.react-fundamentals': 'React',
@@ -96,12 +120,12 @@ export default {
   'certifications.hours': 'horas',
   'certifications.view-certificate': 'Ver certificado',
   'certifications.skills': 'Habilidades adquiridas',
-  
+  // Languages
   'languages.portuguese': 'Português',
   'languages.english': 'Inglês',
   'languages.level.native': 'Nativo',
   'languages.level.intermediate': 'Intermediário - Técnico',
-
+  // Contact
   'contact.phone': 'Telefone',
   'contact.email': 'Email',
   'contact.linkedin': 'LinkedIn',

@@ -1,324 +1,66 @@
 @media print {
 
-  /* Configurações para A4 */
-  @page {
-    size: A4;
-    margin: 0.8cm 2cm;
-    /* Margens padrão para CV internacional */
-  }
-
-  /* Configurações gerais */
-  body {
-    background: white !important;
-    color: rgb(33, 33, 33) !important;
-    /* Cor mais escura para melhor legibilidade */
-    font-size: 9pt !important;
-    /* Tamanho padrão para CV */
-    line-height: 1.15 !important;
-    font-family: Arial, sans-serif !important;
-    /* Fonte mais compatível com ATS */
-    /* Fonte padrão para CV */
-  }
-
-  /* Hierarquia tipográfica padronizada */
-  h1 {
-    font-size: 14pt !important;
-    /* Nome */
-    font-weight: bold !important;
-    margin-bottom: 0.2cm !important;
-  }
-
-  h2 {
-    font-size: 11pt !important;
-    /* Cargo */
-    font-weight: bold !important;
-    margin-bottom: 0.15cm !important;
-  }
-
-  h3.section-title {
-    font-size: 10pt !important;
-    /* Títulos de seção */
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    margin-bottom: 0.1cm !important;
-    margin-top: 0.2cm !important;
-  }
-
-  h4 {
-    font-size: 9.5pt !important;
-    /* Subtítulos */
-    font-weight: bold !important;
-    margin-bottom: 0.1cm !important;
-  }
-
-  /* Títulos das seções padronizados para ATS */
-  .section-education,
-  .section-work-experience,
-  .section-skills,
-  .section-professional-summary {
-    page-break-inside: avoid !important;
-  }
-
-  /* Cabeçalho mais compacto */
-  header {
-    text-align: left !important;
-    margin-bottom: 0.5cm !important;
-  }
-
-  /* Container de contatos otimizado para ATS */
-  header .grid {
-    display: block !important;
-    text-align: left !important;
-    margin-top: 0.3cm !important;
-    margin-bottom: 0.3cm !important;
-  }
-
-  /* Formatação individual dos contatos */
-  header .grid a {
-    display: block !important;
-    margin-bottom: 0.15cm !important;
-    color: rgb(33, 33, 33) !important;
-    text-decoration: none !important;
-    font-size: 9pt !important;
-  }
-
-  /* Remove ícones na impressão */
-  header .grid svg {
+  /* Remove configurações específicas do PrintLayout */
+  .skills-page,
+  .skills-column {
     display: none !important;
   }
 
-  /* Formatação específica para email e LinkedIn */
-  header .grid a[href^="mailto"] span,
-  header .grid a[href*="linkedin.com"] span {
-    display: inline !important;
-    white-space: normal !important;
-    overflow: visible !important;
-  }
-
-  /* Remove pseudo-elementos anteriores */
-  header .grid a[href^="mailto"]::after,
-  header .grid a[href*="linkedin.com"]::after {
-    content: none !important;
-  }
-
-  /* Formata texto dos links */
-  header .grid span {
-    display: inline !important;
-    white-space: normal !important;
-    overflow: visible !important;
-  }
-
-  /* Adiciona prefixos para clareza */
-  header .grid a[href^="mailto"] span::before {
-    content: "Email: " !important;
-    font-weight: normal !important;
-  }
-
-  header .grid a[href*="linkedin.com"] span::before {
-    content: "LinkedIn: " !important;
-    font-weight: normal !important;
-  }
-
-  header .grid a[href^="tel"] span::before {
-    content: "Telefone: " !important;
-    font-weight: normal !important;
-  }
-
-  header .grid a[href*="github.com"] span::before {
-    content: "GitHub: " !important;
-    font-weight: normal !important;
-  }
-
-  header .grid a[href*="portfoliordz"] span::before {
-    content: "Website: " !important;
-    font-weight: normal !important;
-  }
-
-  /* Informações de contato em linha */
-  .grid {
+  /* Restaura layout principal */
+  .main-layout {
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-direction: row !important;
     gap: 0.2cm !important;
-    margin-bottom: 0.2cm !important;
-    font-size: 8.5pt !important;
   }
 
-  .grid>* {
-    margin-right: 0.3cm !important;
+  /* Restaura colunas */
+  .main-column {
+    width: 65% !important;
+    padding-right: 0.15cm !important;
   }
 
-  /* Ajusta seções principais */
-  section {
-    margin-bottom: 0.15cm !important;
+  .side-column {
+    width: 35% !important;
+    padding-left: 0.15cm !important;
+    border-left: 1px solid #e5e5e5 !important;
   }
 
-  /* Listas mais compactas */
-  ul {
-    margin-left: 0.25cm !important;
-    margin-bottom: 0.1cm !important;
-    list-style-type: disc !important;
+  /* Ordem das seções */
+  .header-section {
+    order: 1 !important;
   }
 
-  li {
-    margin-bottom: 0.04cm !important;
-    line-height: 1.1 !important;
+  .summary-section {
+    order: 2 !important;
   }
 
-  /* Habilidades em formato texto */
+  .experience-section {
+    order: 3 !important;
+  }
+
+  .projects-section {
+    order: 4 !important;
+  }
+
+  /* Seções laterais */
   .skills-section {
-    columns: 3 !important;
-    column-gap: 0.4cm !important;
+    order: 1 !important;
   }
 
-  .bg-blue-100 {
-    display: inline !important;
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin-right: 0.1cm !important;
-    font-size: 9pt !important;
+  .education-section {
+    order: 2 !important;
   }
 
-  /* Ajusta experiência profissional */
-  .work-experience h3 {
-    font-size: 10pt !important;
-    font-weight: bold !important;
-    margin-top: 0.1cm !important;
-    margin-bottom: 0.05cm !important;
-    color: rgb(33, 33, 33) !important;
-    font-family: Arial, sans-serif !important;
+  .certifications-section {
+    order: 3 !important;
   }
 
-  .work-experience p,
-  .work-experience li {
-    font-size: 9.5pt !important;
-    line-height: 1.1 !important;
-    font-family: Arial, sans-serif !important;
-    color: rgb(33, 33, 33) !important;
+  .languages-section {
+    order: 4 !important;
   }
 
-  .work-experience .company-name {
-    font-weight: normal !important;
-    font-style: normal !important;
-    font-size: 9pt !important;
-  }
-
-  .work-experience .period {
-    font-size: 9pt !important;
-    color: rgb(66, 66, 66) !important;
-  }
-
-  /* Ajusta listas na experiência profissional */
-  .work-experience ul {
-    margin-left: 0.5cm !important;
-    /* Aumenta margem esquerda */
-    padding-left: 0.3cm !important;
-    /* Adiciona padding para os bullets */
-    list-style-position: outside !important;
-    /* Força bullets fora do texto */
-    list-style-type: disc !important;
-  }
-
-  .work-experience li {
-    margin-bottom: 0.05cm !important;
-    line-height: 1.1 !important;
-    padding-left: 0.1cm !important;
-    /* Espaço entre bullet e texto */
-    text-indent: 0 !important;
-    /* Remove indentação */
-  }
-
-  /* Ajusta texto dentro dos itens */
-  .work-experience li p {
-    display: inline !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Remove elementos não essenciais */
-  .print\:hidden,
-  .theme-toggle,
-  .language-switcher {
+  /* Remove configurações aninhadas de @media print */
+  @media print {
     display: none !important;
-  }
-
-  /* Remove espaços */
-  .space-y-6,
-  .space-y-8,
-  .space-y-4,
-  .space-y-2,
-  .mb-6,
-  .mb-4,
-  .mb-8,
-  .mt-4,
-  .mt-8 {
-    margin: 0 !important;
-  }
-
-  /* Ajusta parágrafos */
-  p {
-    margin-bottom: 0.04cm !important;
-    line-height: 1.1 !important;
-    text-align: justify !important;
-  }
-
-  /* Remove transições */
-  * {
-    transition: none !important;
-  }
-
-  /* Texto padrão */
-  p,
-  li,
-  .grid,
-  .work-experience p {
-    font-size: 9.5pt !important;
-  }
-
-  /* Texto secundário */
-  .period,
-  .company-name,
-  .bg-blue-100 {
-    font-size: 9pt !important;
-  }
-
-  /* Informações de contato */
-  .contact-info {
-    font-size: 8.5pt !important;
-  }
-
-  /* Ajustes para impressão dos contatos */
-  /* Remove ícones na impressão */
-  header nav svg {
-    display: none !important;
-  }
-
-  /* Organiza contatos em coluna */
-  header nav .flex {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.1cm !important;
-  }
-
-  /* Remove ícones na impressão */
-  header nav a[href^="tel"] span::before,
-  header nav a[href^="mailto"] span::before,
-  header nav a[href*="linkedin.com"] span::before,
-  header nav a[href*="github.com"] span::before,
-  header nav a[href*="portfoliordz"] span::before {
-    content: none !important;
-  }
-
-  /* Ajusta tamanho e espaçamento do texto */
-  header nav {
-    font-size: 9pt !important;
-    line-height: 1.2 !important;
-    margin-top: 0.2cm !important;
-  }
-
-  /* Remove efeitos de hover e transições */
-  header nav a {
-    color: black !important;
-    transition: none !important;
   }
 }

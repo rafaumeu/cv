@@ -8,18 +8,23 @@ export const ExperienceItem: React.FC<Experience> = React.memo(({
   role,
   company,
   period,
+  location,
   achievements,
   skills,
 }) => {
   const renderedSkills = useMemo(() => (
-    skills.map((skill, index) => (
+    Array.isArray(skills) ? skills.map((skill: string, index: number) => (
       <span
         key={index}
         className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs sm:text-sm"
       >
         {skill}
       </span>
-    ))
+    )) : (
+      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs sm:text-sm">
+        {skills}
+      </span>
+    )
   ), [skills]);
 
   const renderedAchievements = useMemo(() => (
@@ -45,11 +50,11 @@ export const ExperienceItem: React.FC<Experience> = React.memo(({
           <div className="text-sm text-gray-600 flex sm:flex-col items-center sm:items-end gap-4 sm:gap-1">
             <div className="flex items-center gap-1">
               <Calendar className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-              <span>{period}</span>
+              <FormattedMessage id={period} />
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-              <span><FormattedMessage id="experience.remote" /></span>
+              <FormattedMessage id={location} />
             </div>
           </div>
         </div>

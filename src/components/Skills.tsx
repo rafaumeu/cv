@@ -16,13 +16,19 @@ export const Skills: React.FC<SkillsProps> = React.memo(({
   certifications,
   languages,
 }) => {
-  const renderSkillCategory = useCallback((category: string, skillList: string[]) => (
-    <SkillCategory 
-      key={category} 
-      title={<FormattedMessage id={`skills.${category}`} />} 
-      skills={skillList} 
-    />
-  ), []);
+  const renderSkillCategory = useCallback((category: string, skillList: string[]) => {
+    const categoryId = category === 'currentlyLearning' 
+      ? `skills.${category}`
+      : `skills.category.${category}`;
+      
+    return (
+      <SkillCategory 
+        key={category} 
+        title={<FormattedMessage id={categoryId} />} 
+        skills={skillList} 
+      />
+    );
+  }, []);
 
   return (
     <section className="mb-8">
