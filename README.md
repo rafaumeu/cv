@@ -1,24 +1,23 @@
 <div align="center">
 
-# 🚀 React + TypeScript + Vite
+# 📄 Digital Resume - Rafael Dias Zendron
 
-A modern template for React development with TypeScript using Vite.
+A modern digital resume with internationalization and responsive design.
 
 [![React](https://img.shields.io/badge/React-18.3-61DAFB.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-Latest-646CFF.svg)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC.svg)](https://tailwindcss.com/)
 [![React Intl](https://img.shields.io/badge/ReactIntl-6.4-00C4B4.svg)](https://formatjs.io/docs/react-intl/)
-[![ESLint](https://img.shields.io/badge/ESLint-9.0-4B32C3.svg)](https://eslint.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com)
 
 ---
 
 ## 📖 Table of Contents
 
-| [Tech Stack](#-tech-stack) | [Features](#-features) | [Prerequisites](#-prerequisites) |
-|---------------------------|------------------------|----------------------------------|
-| [Setup](#️-setup) | [Project Structure](#️-project-structure) | [Environment Variables](#-environment-variables) |
+| [Tech Stack](#-tech-stack) | [Features](#-features) | [Setup](#️-setup) |
+|---------------------------|------------------------|------------------|
+| [Project Structure](#️-project-structure) | [Deployment](#-deployment) | [Contact](#-contact) |
 
 ---
 
@@ -28,47 +27,40 @@ A modern template for React development with TypeScript using Vite.
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-gray?style=for-the-badge)
+![React Intl](https://img.shields.io/badge/React_Intl-00C4B4?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
 </div>
 
 ## 🚀 Features
 
-- **Minimal Configuration**:
-  - HMR (Hot Module Replacement)
-  - ESLint Rules
-  - TypeScript
-  - Fast Refresh
-
-- **Official Plugins**:
-  - @vitejs/plugin-react (using Babel)
-  - @vitejs/plugin-react-swc (using SWC)
-
 - **Internationalization (i18n)**:
-  - Multi-language support with react-intl
-  - Language switching functionality
-  - Pre-configured translations (EN/PT-BR)
-  - Easy to add new languages
+  - Multilingual support (PT-BR/EN)
+  - Automatic content translation
+  - Browser language detection
 
-- **UI Components**:
-  - Custom Card components
-  - Responsive design with Tailwind CSS
-  - Lucide icons integration
-  - Type-safe component props
+- **Responsive Design**:
+  - Mobile-first layout
+  - Automatic light/dark theme
+  - Adaptation for different devices
 
-- **Performance Optimizations**:
-  - Code splitting
-  - Lazy loading
-  - Optimized build configuration
-  - SEO-friendly with meta tags
+- **SEO & Sharing**:
+  - Dynamic meta tags
+  - OpenGraph image generation
+  - Twitter Cards
+  - Schema.org markup
+
+- **Printing Experience**:
+  - PDF-optimized layout
+  - Print-specific styles
+  - Automatic section organization
 
 - **Developer Experience**:
   - TypeScript strict mode
   - ESLint configuration
-  - Path aliases (@/ imports)
-  - Hot Module Replacement
+  - Conventional Commits
+  - GitHub Actions integration
 
 ## 📦 Prerequisites
 
@@ -81,40 +73,41 @@ A modern template for React development with TypeScript using Vite.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/your-project.git
-cd your-project
+git clone https://github.com/rafaumeu/digital-resume.git
+cd digital-resume
 ```
 
 2. Install dependencies:
 
 ```bash
-npm install
-# or
-yarn
+yarn install
 ```
 
 3. Start development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
 ## 🏗️ Project Structure
 
 ```
-your-project/
+├── api/                # API endpoints
+├── public/             # Static public assets
 ├── src/
-│   ├── components/
-│   ├── assets/
-│   ├── App.tsx
-│   └── main.tsx
-├── public/
-├── tsconfig.json
-├── vite.config.ts
-└── package.json
+│   ├── assets/         # Static assets
+│   ├── components/     # React components
+│   ├── data/           # Application data
+│   ├── hooks/          # Custom React hooks
+│   ├── i18n/           # Internationalization
+│   └── types/          # TypeScript type definitions
+├── tailwind.config.js  # Tailwind CSS configuration
+└── vite.config.ts      # Vite configuration
 ```
+
+## 🚀 Deployment
+
+Deployed on Vercel: [Digital Resume Website](https://rafaeldiaszendroncv-three-inky.vercel.app/)
 
 ---
 
