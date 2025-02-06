@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/og.tsx": {
+    "api/og": {
       "memory": 3008,
       "maxDuration": 30
     }
@@ -9,6 +9,10 @@
     {
       "source": "/api/og",
       "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/png"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800"

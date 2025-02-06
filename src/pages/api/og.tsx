@@ -6,10 +6,6 @@ export const config = {
 
 export default async function handler() {
   try {
-    const interBold = await fetch(
-      new URL('../../assets/fonts/Inter-Bold.ttf', import.meta.url)
-    ).then((res) => res.arrayBuffer());
-
     return new ImageResponse(
       (
         <div
@@ -20,7 +16,7 @@ export default async function handler() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#fff',
+            background: 'linear-gradient(to right, #0f172a, #1e293b)',
             padding: '40px 60px',
           }}
         >
@@ -39,6 +35,7 @@ export default async function handler() {
                 width: '160px',
                 height: '160px',
                 borderRadius: '80px',
+                border: '4px solid #ffffff',
               }}
             />
             <div
@@ -51,9 +48,8 @@ export default async function handler() {
               <h1
                 style={{
                   fontSize: '60px',
-                  fontFamily: 'Inter Bold',
                   margin: 0,
-                  color: '#1a1a1a',
+                  color: '#ffffff',
                 }}
               >
                 Rafael Dias Zendron
@@ -61,31 +57,45 @@ export default async function handler() {
               <h2
                 style={{
                   fontSize: '32px',
-                  fontFamily: 'Inter',
                   margin: 0,
-                  color: '#666666',
+                  color: '#94a3b8',
                 }}
               >
                 Desenvolvedor Full Stack & Arquiteto de Software
               </h2>
             </div>
           </div>
+          <div
+            style={{
+              marginTop: '40px',
+              display: 'flex',
+              gap: '16px',
+            }}
+          >
+            {['React', 'Node.js', 'TypeScript', 'Clean Architecture'].map((tech) => (
+              <div
+                key={tech}
+                style={{
+                  padding: '12px 24px',
+                  borderRadius: '24px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#ffffff',
+                  fontSize: '24px',
+                }}
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
         </div>
       ),
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Inter Bold',
-            data: interBold,
-            style: 'normal',
-          },
-        ],
       }
     );
   } catch (e) {
-    console.error(e);
+    console.log(`${e.message}`);
     return new Response(`Failed to generate image`, {
       status: 500,
     });
