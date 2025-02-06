@@ -13,6 +13,7 @@
     "@rollup/rollup-linux-x64-gnu": "^4.34.3",
     "@types/node": "^22.10.2",
     "@types/react-helmet-async": "^1.0.3",
+    "@vercel/og": "^0.6.5",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
     "lucide-react": "^0.469.0",
