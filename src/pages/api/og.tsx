@@ -94,8 +94,9 @@ export default async function handler() {
         height: 630,
       }
     );
-  } catch (e) {
-    console.log(`${e.message}`);
+  } catch (e: unknown) {
+    const error = e instanceof Error ? e.message : 'Unknown error';
+    console.log(error);
     return new Response(`Failed to generate image`, {
       status: 500,
     });

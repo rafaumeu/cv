@@ -11,19 +11,25 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": [],
-    /* Bundler mode */
+    "types": [
+      "react",
+      "node",
+      "vite/client"
+    ],
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    /* Linting */
+    "jsxImportSource": "react",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -33,5 +39,13 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
