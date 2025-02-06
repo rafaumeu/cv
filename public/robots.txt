@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
-Sitemap: https://portfoliordz.netlify.app/sitemap.xml 
+
+# Sitemap
+Sitemap: https://portfoliordz.netlify.app/sitemap.xml
+
+# Regras específicas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Taxa de rastreamento
+Crawl-delay: 10 
