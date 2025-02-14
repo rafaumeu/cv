@@ -1,23 +1,26 @@
-import React, { createContext, useState, PropsWithChildren } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { IntlProvider } from 'react-intl';
 import ptBR from './messages/pt-BR';
 import enUS from './messages/en-US';
+
+type Language = 'pt-BR' | 'en-US';
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+}
+
+export const LanguageContext = createContext<LanguageContextType>({
+  language: 'pt-BR',
+  setLanguage: () => {},
+});
 
 const messages = {
   'pt-BR': ptBR,
   'en-US': enUS,
 };
 
-type Language = 'pt-BR' | 'en-US';
-
-interface LanguageContextType {
-  language: Language;
-  setLanguage: (language: Language) => void;
-}
-
-export const LanguageContext = createContext<LanguageContextType>({} as LanguageContextType);
-
-export const LanguageProvider: React.FC<PropsWithChildren> = ({ children }) => {
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('pt-BR');
 
   return (
@@ -27,4 +30,6 @@ export const LanguageProvider: React.FC<PropsWithChildren> = ({ children }) => {
       </IntlProvider>
     </LanguageContext.Provider>
   );
-}; 
+};
+
+export const useLanguage = () => useContext(LanguageContext); 
