@@ -1,66 +1,178 @@
 @media print {
 
-  /* Remove configurações específicas do PrintLayout */
-  .skills-page,
-  .skills-column {
+  /* Reset e configurações base */
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: Arial, sans-serif !important;
+    line-height: 1.2 !important;
+    color: black !important;
+  }
+
+  /* Configuração da página */
+  @page {
+    margin: 1cm !important;
+    size: A4 !important;
+  }
+
+  /* Tamanhos de fonte reduzidos */
+  h1 {
+    font-size: 14pt !important;
+  }
+
+  h2 {
+    font-size: 12pt !important;
+  }
+
+  h3 {
+    font-size: 11pt !important;
+  }
+
+  p,
+  li,
+  span {
+    font-size: 9pt !important;
+  }
+
+  /* Espaçamentos mais compactos */
+  .print-section {
+    margin-bottom: 0.3cm !important;
+  }
+
+  /* Skills em grid compacto */
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.1cm !important;
+  }
+
+  /* Experiências mais compactas */
+  .experience-item {
+    margin-bottom: 0.2cm !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Projetos em formato condensado */
+  .project-item {
+    margin-bottom: 0.2cm !important;
+  }
+
+  /* Certificações em linha */
+  .certification-item {
+    display: inline-block !important;
+    margin-right: 0.5cm !important;
+  }
+
+  /* Remover elementos desnecessários */
+  .print-hide,
+  .theme-switch,
+  .language-switcher,
+  .social-links {
     display: none !important;
   }
+}
 
-  /* Restaura layout principal */
-  .main-layout {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 0.2cm !important;
+/* Layout linear para ATS */
+body {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Cabeçalhos padronizados */
+h1 {
+  font-size: 16pt !important;
+  margin-bottom: 0.5cm !important;
+  text-align: center !important;
+}
+
+.summary-section {
+  h2 {
+    font-size: 14pt !important;
+    margin: 0.5cm 0 0.3cm 0 !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid #000 !important;
   }
 
-  /* Restaura colunas */
-  .main-column {
-    width: 65% !important;
-    padding-right: 0.15cm !important;
-  }
-
-  .side-column {
-    width: 35% !important;
-    padding-left: 0.15cm !important;
-    border-left: 1px solid #e5e5e5 !important;
-  }
-
-  /* Ordem das seções */
-  .header-section {
-    order: 1 !important;
-  }
-
-  .summary-section {
-    order: 2 !important;
-  }
-
-  .experience-section {
-    order: 3 !important;
-  }
-
-  .projects-section {
-    order: 4 !important;
+  h3 {
+    font-size: 12pt !important;
+    margin: 0.3cm 0 !important;
   }
 
   /* Seções laterais */
-  .skills-section {
-    order: 1 !important;
+  /* Conteúdo principal */
+  p,
+  li,
+  span {
+    font-size: 11pt !important;
+    margin-bottom: 0.2cm !important;
   }
 
-  .education-section {
-    order: 2 !important;
+  /* Links sem decoração */
+  a {
+    text-decoration: none !important;
+    color: black !important;
   }
 
-  .certifications-section {
-    order: 3 !important;
+  order: 4 !important;
+
+  /* Listas otimizadas */
+  ul,
+  ol {
+    margin-left: 0.5cm !important;
+    margin-bottom: 0.3cm !important;
+  }
+}
+
+/* Seções principais */
+section {
+  margin-bottom: 0.5cm !important;
+  page-break-inside: avoid !important;
+}
+
+/* Grid de skills em lista para ATS */
+.skills-grid {
+  display: block !important;
+}
+
+.mb-8 {
+  .skills-grid>div {
+    margin-bottom: 0.2cm !important;
   }
 
-  .languages-section {
-    order: 4 !important;
-  }
-
-  /* Remove configurações aninhadas de @media print */
-  @media print {
+  /* Grid de skills mais compacto */
+  /* Remover elementos não essenciais */
+  .print-hide,
+  .theme-switch,
+  .language-switcher {
     display: none !important;
+  }
+
+  /* Fonte mais compacta para impressão */
+  /* Otimização para experiência profissional */
+  .experience-item {
+    margin-bottom: 0.4cm !important;
+    page-break-inside: avoid !important;
+  }
+
+  .p-4,
+  /* Certificações e educação */
+  .certification-item,
+  .education-item {
+    margin-bottom: 0.3cm !important;
+    page-break-inside: avoid !important;
+  }
+
+  .experience-item {
+
+    /* Contatos em formato texto plano */
+    .contact-info {
+      text-align: center !important;
+      margin-bottom: 0.4cm !important;
+    }
+  }
+
+  /* Evitar quebras em locais importantes */
+  .no-break {
+    page-break-inside: avoid !important;
   }
 }
