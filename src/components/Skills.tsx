@@ -3,11 +3,12 @@ import { FormattedMessage } from 'react-intl';
 import { SkillCategory } from './SkillCategory';
 import { CertificationList } from './CertificationList';
 import { LanguageList } from './LanguageList';
-import { Skills as SkillsType, Certification, Language } from '@/types/cv';
+import { Skills as SkillsType, Certification, Language, ProfileType } from '@/types/cv';
 
 interface SkillsProps {
   skills: SkillsType;
   certifications: Certification[];
+  profile: ProfileType;
   languages: Language[];
 }
 
@@ -15,12 +16,18 @@ export const Skills: React.FC<SkillsProps> = React.memo(({
   skills,
   certifications,
   languages,
+  profile
 }) => {
   const renderSkillCategory = useCallback((category: string, skillList: string[]) => {
     const categoryId = category === 'currentlyLearning' 
       ? `skills.${category}`
       : `skills.category.${category}`;
       
+    if (!Array.isArray(skillList)) {
+      console.warn(`Skills para categoria ${category} não é um array`);
+      return null;
+    }
+    
     return (
       <SkillCategory 
         key={category} 
@@ -41,7 +48,7 @@ export const Skills: React.FC<SkillsProps> = React.memo(({
           renderSkillCategory(category, skillList)
         )}
         
-        <CertificationList certifications={certifications} />
+        <CertificationList certifications={certifications} profile={profile} />
         <LanguageList languages={languages} />
       </div>
     </section>
