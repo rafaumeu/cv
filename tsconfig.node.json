@@ -5,7 +5,12 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "strict": true
+    "strict": true,
+    "types": [
+      "@types/babel__traverse",
+      "@types/babel__generator",
+      "@types/json-schema"
+    ]
   },
   "include": [
     "vite.config.ts"

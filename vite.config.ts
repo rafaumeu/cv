@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -16,7 +17,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  define: {
+    'process.env': {},
+  },
+  server: {
+    port: 3000,
+  },
   build: {
+    outDir: 'dist',
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -30,5 +39,11 @@ export default defineConfig({
   },
   esbuild: {
     jsx: 'automatic',
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/setupTests.ts'],
+    include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
 });
