@@ -13,7 +13,7 @@
     "node": "18.x"
   },
   "dependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.34.3",
+    "@rollup/rollup-linux-x64-gnu": "^4.34.7",
     "@types/node": "^22.10.2",
     "@types/react-helmet-async": "^1.0.3",
     "@vercel/node": "3.0.0",
