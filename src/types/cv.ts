@@ -75,16 +75,22 @@ export interface GithubData {
   topLanguages: string[];
 }
 
+export interface Subject {
+  id: string;
+  status: 'completed' | 'in-progress' | 'planned';
+}
+
 export interface EducationItem {
-  degree: string;
   institution: string;
   course: string;
+  degree: string;
   period: string;
-  description: string[];
-  subjects?: {
-    id: string;
-    status: 'completed' | 'in-progress' | 'planned';
-  }[];
+  description?: string[];
+  subjects?: Subject[];
+}
+
+export interface EducationProps {
+  education: EducationItem[];
 }
 
 export interface Repository {
