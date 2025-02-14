@@ -3,14 +3,14 @@ import { FormattedMessage } from 'react-intl';
 import { useGithubRepositories } from '@/hooks/useGithubRepositories';
 import { ProfileType } from '@/types/cv';
 import { ProjectItem } from './ProjectItem';
-import { useIntl } from 'react-intl';
+
 
 interface ProjectsProps {
   profile: ProfileType;
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ profile }) => {
-  const intl = useIntl();
+  
   const { repositories, isLoading, error } = useGithubRepositories(profile);
 
   if (isLoading) {

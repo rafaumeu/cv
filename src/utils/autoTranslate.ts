@@ -1,6 +1,4 @@
-import { Repository } from '@/types/github';
-import { RESERVED_WORDS, ReservedWord } from './reservedWords';
-import { commonTechTerms } from '@/i18n/techTerms';
+import { RESERVED_WORDS } from './reservedWords';
 
 const commonTechTerms: Record<string, Record<string, string>> = {
   'pt-BR': {

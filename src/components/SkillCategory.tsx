@@ -31,7 +31,7 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) =
                 </span>
               </div>
             );
-          } catch (error) {
+          } catch  {
             console.warn(`Translation not found for skill: ${skill}`);
             return null;
           }

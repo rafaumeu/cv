@@ -1,38 +1,56 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { FormattedMessage } from 'react-intl';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Project } from '@/types/project';
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
-  skills: string[];
-  highlights: string[];
+  project: Project;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  description,
-  skills,
-  highlights
-}) => (
-  <Card className="mb-4">
-    <CardContent className="pt-4">
-      <h3 className="font-bold text-lg text-gray-900">{title}</h3>
-      <p className="text-gray-700 mt-1">{description}</p>
-      <ul className="mt-2 list-disc list-inside text-gray-700">
-        {highlights.map((highlight, index) => (
-          <li key={index}>{highlight}</li>
-        ))}
-      </ul>
-      <div className="mt-3 flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span
-            key={index}
-            className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-sm"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-    </CardContent>
-  </Card>
-);
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  return (
+    <Card className="h-full bg-card-light dark:bg-card-dark border-border dark:border-border-dark hover:shadow-lg transition-shadow duration-200">
+      <CardHeader className="space-y-1">
+        <CardTitle className="text-xl md:text-2xl font-bold text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark transition-colors duration-200">
+          {project.name}
+        </CardTitle>
+        <p className="text-sm text-text-secondary dark:text-text-secondary-dark">
+          {project.description}
+        </p>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-2">
+          {project.highlights && (
+            <div>
+              <h4 className="text-sm font-medium text-text dark:text-text-dark mb-1">
+                <FormattedMessage id="projects.highlightsLabel" />
+              </h4>
+              <ul className="list-disc list-inside text-sm text-text-secondary dark:text-text-secondary-dark">
+                {project.highlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div>
+            <h4 className="text-sm font-medium text-text dark:text-text-dark mb-1">
+              <FormattedMessage id="projects.skillsLabel" />
+            </h4>
+            <div className="flex flex-wrap gap-1">
+              {project.skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary-light"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default ProjectCard;
