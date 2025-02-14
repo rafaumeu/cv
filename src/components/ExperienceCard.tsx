@@ -1,6 +1,4 @@
 import React from 'react';
-import { Star, Calendar, MapPin } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import { FormattedMessage } from 'react-intl';
 import { Experience } from '@/types/cv';
 
@@ -11,52 +9,86 @@ export const ExperienceCard: React.FC<Experience> = ({
   location,
   achievements,
   skills,
+  metrics
 }) => (
-  <Card className="mb-6 hover:shadow-lg transition-shadow duration-300">
-    <CardContent className="pt-6">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
-        <div>
-          <h3 className="font-bold text-base sm:text-lg text-gray-900">
-            <FormattedMessage id={role} />
-          </h3>
-          <p className="text-blue-600 text-sm sm:text-base">
-            <FormattedMessage id={company} />
-          </p>
-        </div>
-        <div className="text-sm text-gray-600 flex sm:flex-col items-center sm:items-end gap-4 sm:gap-1">
-          <div className="flex items-center gap-1">
-            <Calendar className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-            <FormattedMessage id={period} />
-          </div>
-          <div className="flex items-center gap-1">
-            <MapPin className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-            <FormattedMessage id={location} />
-          </div>
-        </div>
+  <div className="experience-item mb-6 print:mb-4">
+    <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+      <div>
+        <h3 className="font-bold text-lg text-primary">
+          <FormattedMessage 
+            id={`experience.role.${role.split('.').pop()}`}
+          />
+        </h3>
+        <p className="text-secondary">
+          <FormattedMessage 
+            id="experience.company" 
+            values={{ name: company.split('.').pop() }}
+          />
+        </p>
       </div>
-      
-      <ul className="mt-3 space-y-2">
+      <div className="text-sm text-muted">
+        <div>
+          <FormattedMessage 
+            id="experience.period" 
+            values={{ key: period.split('.').pop() }}
+          />
+        </div>
+        {location && (
+          <div>
+            <FormattedMessage 
+              id="experience.location" 
+              values={{ key: location.split('.').pop() }}
+            />
+          </div>
+        )}
+      </div>
+    </div>
+
+    <div className="space-y-2">
+      <h4 className="font-semibold">
+        <FormattedMessage id="experience.achievements.title" />
+      </h4>
+      <ul className="list-disc pl-5 space-y-1">
         {achievements.map((achievement, index) => (
-          <li key={index} className="flex gap-2 text-gray-700">
-            <Star size={16} className="flex-shrink-0 mt-1 text-blue-600" />
-            <FormattedMessage id={achievement} />
+          <li key={index} className="text-text-primary">
+            <FormattedMessage 
+              id={`experience.achievements.${achievement.split('.').pop()}`}
+            />
           </li>
         ))}
       </ul>
-      
-      <div className="mt-4 flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span
-            key={index}
-            className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm
-                     hover:bg-blue-200 transition-colors cursor-default"
-          >
-            {skill}
-          </span>
-        ))}
+
+      {metrics && (
+        <div className="mt-4">
+          <h4 className="font-semibold">
+            <FormattedMessage id="experience.metrics.title" />
+          </h4>
+          <ul className="list-disc pl-5 space-y-1">
+            {metrics.map((metric, index) => (
+              <li key={index} className="text-text-secondary">
+                <FormattedMessage 
+                  id={`experience.metrics.${metric.split('.').pop()}`}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className="mt-4">
+        <h4 className="font-semibold">
+          <FormattedMessage id="experience.skills.title" />
+        </h4>
+        <div className="flex flex-wrap gap-2 mt-2">
+          {skills.map((skill, index) => (
+            <span key={index} className="text-sm bg-primary/10 text-primary px-2 py-1 rounded">
+              <FormattedMessage id={skill} />
+            </span>
+          ))}
+        </div>
       </div>
-    </CardContent>
-  </Card>
+    </div>
+  </div>
 );
 
 ExperienceCard.displayName = 'ExperienceCard';
