@@ -1,11 +1,9 @@
 import { ImageResponse } from '@vercel/og';
-import { NextRequest } from 'next/server';
-
 export const config = {
   runtime: 'edge'
 };
 
-export default async function handler(req: NextRequest) {
+export default async function handler() {
   try {
     return new ImageResponse(
       {
@@ -90,8 +88,9 @@ export default async function handler(req: NextRequest) {
         height: 630,
       }
     );
-  } catch (e: any) {
-    return new Response(JSON.stringify({ error: e.message }), {
+  } catch (e: Error | unknown) {
+    const error = e instanceof Error ? e : new Error('Unknown error');
+    return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
