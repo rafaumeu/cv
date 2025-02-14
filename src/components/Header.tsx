@@ -1,27 +1,63 @@
+import React from 'react';
 import { Mail, Linkedin, Github, Phone, Globe } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { FormattedMessage } from 'react-intl';
 import { useIntl } from 'react-intl';
 
-export const Header = () => {
+import { useTheme } from '@/hooks/theme';
+import { ProfileType } from '@/types/cv';
+
+interface HeaderProps {
+  profile: ProfileType;
+  onProfileChange: (profile: ProfileType) => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ profile, onProfileChange }) => {
   const intl = useIntl();
+  const { theme } = useTheme();
   
-  // Adiciona os prefixos traduzidos via data-attributes
   const getContactPrefix = (type: string) => {
-    return intl.formatMessage({ id: `contact.${type}` }) + ": ";
+    return intl.formatMessage({ id: `contact.${type}` });
   };
 
   return (
-    <header className="mb-6 sm:mb-8 text-center print:mb-4" role="banner">
-      <div className="flex justify-end mb-4 print:hidden">
+    <header>
+      <div className="flex justify-between items-center mb-4 print:hidden">
+        <select
+          value={profile}
+          onChange={(e) => onProfileChange(e.target.value as ProfileType)}
+          className={`
+            px-4 py-2 rounded-md border
+            ${theme === 'dark' 
+              ? 'bg-gray-700 border-gray-600 text-white' 
+              : 'bg-white border-gray-300 text-gray-700'
+            }
+            hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary
+            transition-colors duration-200
+          `}
+        >
+          <option value="backend">
+            {intl.formatMessage({ id: "profile.backend" })}
+          </option>
+          <option value="frontend">
+            {intl.formatMessage({ id: "profile.frontend" })}
+          </option>
+          <option value="fullstack">
+            {intl.formatMessage({ id: "profile.fullstack" })}
+          </option>
+        </select>
         <LanguageSwitcher />
       </div>
-      <h1 className="text-3xl sm:text-4xl font-bold text-text print:text-2xl" itemProp="name">
-        Rafael Dias Zendron
-      </h1>
-      <h2 className="text-lg sm:text-xl text-primary mt-2 sm:mt-4 print:text-base print:mt-2" itemProp="jobTitle">
-        <FormattedMessage id="header.role" defaultMessage="Full Stack Developer" />
-      </h2>
+      <div className="flex flex-col items-center">
+
+        <h1 className="text-3xl font-bold text-primary">
+          Rafael Dias Zendron
+        </h1>
+        <h2 className="text-lg sm:text-xl text-primary mt-2 sm:mt-4 print:text-base print:mt-2" itemProp="jobTitle">
+          {intl.formatMessage({ 
+            id: `header.role.${profile}`
+          })}
+        </h2>
+      </div>
       <nav className="mt-4 text-text/80 text-sm sm:text-base print:text-sm" aria-label="Contato">
         <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
           <a 
