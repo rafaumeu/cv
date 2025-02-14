@@ -62,6 +62,56 @@ A modern digital resume with internationalization and responsive design.
   - Conventional Commits
   - GitHub Actions integration
 
+- **Profile System**:
+  - Backend Developer Profile
+  - Frontend Developer Profile
+  - Full Stack Developer Profile
+  - Dynamic profile switching
+  - ATS-optimized keywords
+
+- **Project Showcase**:
+  - GitHub integration
+  - Repository metrics
+  - Automatic translation
+  - Tech stack badges
+
+- **Experience Timeline**:
+  - Role-based experiences
+  - Achievement tracking
+  - Key metrics display
+  - Location and period tracking
+
+- **Skills & Certifications**:
+  - Categorized skills
+  - Rocketseat certifications
+  - Language proficiency
+  - Tool expertise
+
+## 🛠️ Technical Details
+
+- **Frontend**:
+  - React 18 with TypeScript
+  - Next.js for SSR/SSG
+  - TailwindCSS for styling
+  - React-Intl for i18n
+
+- **Integration**:
+  - GitHub API integration
+  - Dynamic repository loading
+  - Automatic content translation
+  - Smart skill validation
+
+- **Performance**:
+  - Lazy loading components
+  - Optimized translations
+  - Print-specific styling
+  - Dark/Light theme support
+
+## 🌐 Supported Languages
+
+- 🇧🇷 Portuguese (Native)
+- 🇺🇸 English (Intermediate)
+
 ## 📦 Prerequisites
 
 - Node.js 14+
