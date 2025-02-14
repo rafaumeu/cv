@@ -1,0 +1,32 @@
+name: Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Code Quality Check
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          eslint_flags: "src/"
+
+      - name: TypeScript Check
+        run: |
+          npm ci
+          npm run type-check
+
+      - name: Test Coverage
+        run: |
+          npm run test:coverage
+
+      - name: Bundle Size Check
+        uses: preactjs/compressed-size-action@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

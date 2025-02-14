@@ -1,0 +1,34 @@
+name: CodeRabbit Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: CodeRabbit Review
+        uses: coderabbitai/ai-pr-reviewer@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        with:
+          debug: false
+          review_simple_changes: false
+          review_comment_lgtm: false
+          path_filters: |
+            !dist/**
+            !build/**
+            !**/*.lock
+          path_instructions:
+            "**/*.ts": "Verifique a tipagem TypeScript e possíveis problemas de type safety."
+            "**/*.tsx": "Verifique os padrões React, hooks e performance."
+            "**/*.test.ts": "Verifique a cobertura e qualidade dos testes."
+            ".github/**": "Verifique as configurações de CI/CD e GitHub Actions."

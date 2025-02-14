@@ -1,0 +1,21 @@
+feature:
+  - "feat/*"
+  - "feature/*"
+
+bug:
+  - "fix/*"
+  - "bugfix/*"
+
+documentation:
+  - "docs/*"
+  - "**/*.md"
+
+dependencies:
+  - "package.json"
+  - "yarn.lock"
+  - "package-lock.json"
+
+tests:
+  - "tests/**/*"
+  - "**/*.test.ts"
+  - "**/*.spec.ts"
