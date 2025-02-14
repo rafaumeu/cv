@@ -111,6 +111,39 @@ Deployed on Vercel: [Digital Resume Website](https://rafaeldiaszendroncv-three-i
 
 ---
 
+## ❤️ Sponsors
+
+Thank you to all the individuals and companies supporting my open source projects. Your support enables me to continue developing and maintaining useful tools for the community.
+
+### 🏆 Special Sponsors
+<!-- Special sponsors will be listed here -->
+
+### ✨ How to Support
+
+You can support my work in several ways:
+
+- [Become a sponsor](https://github.com/sponsors/rafaumeu)
+- Give a ⭐️ to repositories you use
+- Share the projects
+- Contribute with code or documentation
+
+### 🎁 Sponsor Benefits
+
+- Priority support via Discord/Email
+- Your name/logo in project READMEs
+- Early access to new features
+- Special mention in major releases
+- Technical consulting (1h/month for Gold+ sponsors)
+
+### 📊 Resource Usage
+
+Resources are used for:
+
+- Project maintenance and evolution
+- New feature development
+- Hosting and infrastructure
+- Content creation and documentation
+
 <div align="center">
 Made with ❤️ by Rafael Dias Zendron
 </div>
