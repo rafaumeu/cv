@@ -1,0 +1,20 @@
+:root {
+  /* Spacing */
+  --spacing-base: 1rem;
+  --spacing-lg: 1.5rem;
+
+  /* Print */
+  --print-font-base: 9pt;
+  --print-spacing: 0.3cm;
+}
+
+/* Classes utilitárias para impressão */
+.print-section {
+  margin-bottom: var(--print-spacing);
+  page-break-inside: avoid;
+}
+
+.print-compact {
+  font-size: var(--print-font-base);
+  line-height: 1.2;
+}
