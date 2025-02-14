@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const PrintLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface PrintLayoutProps {
+  children: React.ReactNode;
+}
+
+export const PrintLayout: React.FC<PrintLayoutProps> = () => {
   return (
     <div className="print:flex print:flex-row print:gap-2">
       <main className="print:w-[70%] print:pr-2">

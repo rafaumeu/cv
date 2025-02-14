@@ -9,33 +9,69 @@ interface RepositoryTranslations {
 
 export const repositoryTranslations: Record<string, RepositoryTranslations> = {
   'pt-BR': {
-    'portfolio-cv': {
-      description: 'Currículo online responsivo construído com Next.js e TailwindCSS',
+    'vite-template': {
+      description: 'Template React moderno com Vite e TypeScript, oferecendo suporte à internacionalização, componentes UI responsivos e ferramentas amigáveis para desenvolvedores. Inclui TailwindCSS para estilização, ícones Lucide e configuração ESLint abrangente. Perfeito para construir aplicações web escaláveis com as melhores práticas.',
       topics: {
-        'web-development': 'desenvolvimento-web',
-        'responsive-design': 'design-responsivo',
-        'portfolio': 'portfólio'
+        'modern-web': 'web-moderna',
+        'developer-tools': 'ferramentas-desenvolvimento',
+        'typescript': 'typescript',
+        'frontend': 'frontend'
+      }
+    },
+    'sabbath-school': {
+      description: 'Plataforma gamificada que transforma a Escola Sabatina em uma experiência de aprendizado envolvente. Possui pontos, conquistas e recompensas para motivar os alunos mantendo o foco espiritual. Construído com Next.js, Fastify e TypeScript.',
+      topics: {
+        'gamification': 'gamificacao',
+        'education': 'educacao',
+        'nextjs': 'nextjs',
+        'fastify': 'fastify'
       }
     },
     'ignite-call': {
-      description: 'Sistema de agendamento com integração ao Google Calendar',
+      description: 'Ignite Call é um aplicativo de agendamento construído com Next.js e TypeScript. Oferece atualizações de disponibilidade em tempo real, agendamento inteligente, integração com Google Calendar, interface elegante, Design System personalizado e autenticação OAuth segura para uma experiência de reserva eficiente.',
       topics: {
-        'scheduling': 'agendamento',
-        'calendar-integration': 'integração-calendario',
-        'real-time': 'tempo-real'
+        'scheduling-system': 'sistema-agendamento',
+        'google-calendar': 'google-calendar',
+        'design-system': 'design-system',
+        'nextjs': 'nextjs'
       }
     },
-    'inorbit': {
-      description: 'InOrbit é uma aplicação backend desenvolvida com TypeScript, Fastify e PostgreSQL. A plataforma utiliza Drizzle ORM para gerenciamento de dados, possui autenticação JWT e integração com Docker, garantindo implantação simplificada e alta escalabilidade. Oferece gerenciamento eficiente de dados, autenticação segura e acompanhamento de metas para uma melhor experiência do usuário.',
+    'ignite-ui': {
+      description: 'Design System modular construído com TypeScript e ESLint. Perfeito para criar interfaces de usuário consistentes e escaláveis em diferentes aplicações.',
       topics: {
-        'high-performance': 'alta-performance',
-        'authentication': 'autenticacao',
-        'data-management': 'gerenciamento-dados',
-        'docker': 'docker',
+        'design-system': 'design-system',
+        'ui-components': 'componentes-ui',
+        'typescript': 'typescript',
+        'monorepo': 'monorepo'
+      }
+    },
+    'inorbit-web': {
+      description: 'Sistema moderno de acompanhamento de metas construído com React, TypeScript, Vite e TailwindCSS. Transforme suas aspirações em conquistas com uma aplicação elegante, performática e type-safe projetada para o futuro.',
+      topics: {
+        'goal-tracking': 'acompanhamento-metas',
+        'performance-optimization': 'otimizacao-performance',
+        'modern-web': 'web-moderna',
         'typescript': 'typescript'
       }
     },
-    // Adicione outros repositórios aqui
+    'inorbit': {
+      description: 'Backend de alta performance construído com TypeScript, Fastify e PostgreSQL. Possui Drizzle ORM, autenticação JWT e integração com Docker, garantindo implantação e escalabilidade contínuas. A plataforma oferece gerenciamento eficiente de dados, autenticação e acompanhamento de metas para uma experiência aprimorada do usuário!',
+      topics: {
+        'high-performance': 'alta-performance',
+        'jwt-authentication': 'autenticacao-jwt',
+        'postgresql': 'postgresql',
+        'docker': 'docker'
+      }
+    },
+    'ecoleta': {
+      description: 'Ecoleta é um marketplace de coleta de resíduos conectando pessoas a pontos de coleta. Construído com HTML, CSS e JavaScript puros, possui design mobile-first, registro de pontos com integração à API do IBGE e interface de busca intuitiva. O front-end está completo e otimizado para todos os tamanhos de tela.',
+      topics: {
+        'eco-friendly': 'eco-friendly',
+        'responsive-design': 'design-responsivo',
+        'web-api': 'api-web',
+        'marketplace': 'marketplace'
+      }
+    }
   },
   'en-US': {
     'portfolio-cv': {
