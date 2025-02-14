@@ -18,21 +18,30 @@ export const ExperienceItem: React.FC<Experience> = React.memo(({
         key={index}
         className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs sm:text-sm"
       >
-        {skill}
+        <FormattedMessage id={skill} />
       </span>
     )) : (
       <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs sm:text-sm">
-        {skills}
+        <FormattedMessage id={skills as string} />
       </span>
     )
   ), [skills]);
 
   const renderedAchievements = useMemo(() => (
-    achievements.map((achievement, index) => (
-      <li key={index} className="text-gray-700">
-        <FormattedMessage id={achievement} />
-      </li>
-    ))
+    achievements.map((achievement, index) => {
+      if (!achievement) {
+        console.warn('Achievement ID is undefined');
+        return null;
+      }
+      return (
+        <li key={index} className="text-gray-700">
+          <FormattedMessage 
+            id={achievement} 
+            defaultMessage={`Achievement ${index + 1}`}
+          />
+        </li>
+      );
+    }).filter(Boolean)
   ), [achievements]);
 
   return (

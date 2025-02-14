@@ -3,32 +3,34 @@ export const SchemaMarkup = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Rafael Dias Zendron",
-    "jobTitle": "Desenvolvedor Full Stack & Arquiteto de Software",
-    "url": "https://portfoliordz.netlify.app/",
-    "image": "https://portfoliordz.netlify.app/api/og",
-    "description": "Desenvolvedor Full Stack especializado em React, Node.js e TypeScript. Experiência em arquitetura de software, otimização de performance e desenvolvimento ágil.",
+    "jobTitle": "Desenvolvedor Full Stack",
+    "url": "https://rafaeldiaszendroncv-three-inky.vercel.app/",
+    "image": "https://github.com/rafaumeu.png",
+    "description": "Desenvolvedor Full Stack especializado em React, Node.js e TypeScript, com foco em arquitetura limpa e performance.",
+    "knowsAbout": [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Fastify",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "JWT Authentication",
+      "REST APIs",
+      "Clean Architecture"
+    ],
+    "skills": [
+      "Frontend Development",
+      "Backend Architecture",
+      "System Design",
+      "API Development",
+      "Database Management",
+      "DevOps Practices"
+    ],
     "sameAs": [
       "https://linkedin.com/in/rafael-dias-zendron-528290132",
       "https://github.com/rafaumeu"
     ],
-    "knowsAbout": [
-      "React.js",
-      "Node.js",
-      "TypeScript",
-      "Clean Architecture",
-      "Domain-Driven Design",
-      "REST APIs",
-      "DevOps",
-      "Desenvolvimento Ágil"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Desenvolvedor Full Stack Independente"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Rocketseat"
-    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "São Paulo",
