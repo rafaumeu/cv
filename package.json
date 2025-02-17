@@ -16,7 +16,7 @@
     "@octokit/rest": "^21.1.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@rollup/rollup-linux-x64-gnu": "^4.34.3",
+    "@rollup/rollup-linux-x64-gnu": "^4.34.8",
     "@types/node": "^22.13.4",
     "@types/react-helmet-async": "^1.0.3",
     "@vercel/node": "3.0.0",

@@ -1060,10 +1060,15 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-s390x-gnu/-/rollup-linux-s390x-gnu-4.34.3.tgz#e6ac0788471a9f7400b358eb5f91292efcc900c4"
   integrity sha512-dIOoOz8altjp6UjAi3U9EW99s8nta4gzi52FeI45GlPyrUH4QixUoBMH9VsVjt+9A2RiZBWyjYNHlJ/HmJOBCQ==
 
-"@rollup/rollup-linux-x64-gnu@4.34.3", "@rollup/rollup-linux-x64-gnu@^4.34.3":
+"@rollup/rollup-linux-x64-gnu@4.34.3":
   version "4.34.3"
   resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.34.3.tgz"
   integrity sha512-lOyG3aF4FTKrhpzXfMmBXgeKUUXdAWmP2zSNf8HTAXPqZay6QYT26l64hVizBjq+hJx3pl0DTEyvPi9sTA6VGA==
+
+"@rollup/rollup-linux-x64-gnu@^4.34.8":
+  version "4.34.8"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.34.8.tgz#5783fc0adcab7dc069692056e8ca8d83709855ce"
+  integrity sha512-8y7ED8gjxITUltTUEJLQdgpbPh1sUQ0kMTmufRF/Ns5tI9TNMNlhWtmPKKHCU0SilX+3MJkZ0zERYYGIVBYHIA==
 
 "@rollup/rollup-linux-x64-musl@4.34.3":
   version "4.34.3"
