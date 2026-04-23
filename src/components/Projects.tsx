@@ -1,28 +1,19 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { useGithubRepositories } from '@/hooks/useGithubRepositories';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { ProfileType } from '@/types/cv';
 import { ProjectItem } from './ProjectItem';
-
+import { getProjectsByProfile } from '@/data/projects';
 
 interface ProjectsProps {
   profile: ProfileType;
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ profile }) => {
-  
-  const { repositories, isLoading, error } = useGithubRepositories(profile);
+  const intl = useIntl();
+  const projectList = getProjectsByProfile(profile, intl.locale);
 
-  if (isLoading) {
-    return <div><FormattedMessage id="projects.loading" /></div>;
-  }
-
-  if (error) {
-    return <div><FormattedMessage id="projects.error" /></div>;
-  }
-
-  if (!repositories?.length) {
-    return <div><FormattedMessage id="projects.empty" /></div>;
+  if (!projectList.length) {
+    return null;
   }
 
   return (
@@ -31,18 +22,8 @@ export const Projects: React.FC<ProjectsProps> = ({ profile }) => {
         <FormattedMessage id="projects.title" />
       </h2>
       <div className="grid grid-cols-1 gap-4">
-        {repositories.map((repo) => (
-          <ProjectItem
-            key={repo.title}
-            title={repo.title}
-            description={repo.description}
-            skills={repo.skills}
-            highlights={repo.highlights}
-            link={repo.link}
-            github={repo.github}
-            stars={repo.stars}
-            updatedAt={repo.updatedAt}
-          />
+        {projectList.map((project) => (
+          <ProjectItem key={project.id} project={project} />
         ))}
       </div>
     </section>

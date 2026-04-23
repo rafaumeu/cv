@@ -1,5 +1,14 @@
 @media print {
 
+  /* Força tema claro para impressão, ignorando tema atual */
+  [data-theme="dark"],
+  [data-theme="light"] {
+    --background: #ffffff !important;
+    --text: #000000 !important;
+    --card: #ffffff !important;
+    --border: #e2e8f0 !important;
+  }
+
   /* Reset e configurações base */
   * {
     margin: 0 !important;

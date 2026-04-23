@@ -16,18 +16,18 @@
 }
 
 [data-theme="dark"] {
-  /* Tema Dracula completo */
-  --background: #282a36;
+  /* Tema Dracula completo - aprimorado */
+  --background: #1a1b2e;
   --text: #f8f8f2;
   --primary: #bd93f9;
-  --secondary: #6272a4;
+  --secondary: #9ca3af;
   --accent: #ff79c6;
   --error: #ff5555;
   --success: #50fa7b;
   --warning: #ffb86c;
   --info: #8be9fd;
-  --card: #44475a;
+  --card: #232436;
   --card-foreground: #f8f8f2;
-  --border: #6272a4;
+  --border: #3b3d57;
   --link: #8be9fd;
 }

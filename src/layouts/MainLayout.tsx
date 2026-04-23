@@ -11,9 +11,18 @@ export function MainLayout({ children }: MainLayoutProps) {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 print:hidden">
         <div className="container flex h-14 max-w-screen-2xl items-center">
           <div className="flex flex-1 items-center justify-between">
+            <div className="text-lg font-semibold text-text">
+              Rafael Dias Zendron
+            </div>
             <ThemeToggle />
           </div>
         </div>
+        <style jsx>{`
+          [data-theme="dark"] header {
+            border-bottom: 1px solid;
+            border-image: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent) 1;
+          }
+        `}</style>
       </header>
       <main className="flex-1">{children}</main>
     </div>
