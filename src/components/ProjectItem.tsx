@@ -1,139 +1,163 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Project } from '@/types/cv';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Star, CheckCircle2, Zap } from 'lucide-react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { StarButton } from './StarButton';
 import { Tooltip } from '@/components/ui/tooltip';
 
-interface ProjectItemProps extends Project {
-  stars?: number;
-  updatedAt?: string;
+interface LocalizedProject {
+  id: string;
+  title: string;
+  localizedSubtitle: string;
+  localizedDescription: string;
+  localizedHighlights: string[];
+  techStack: string[];
+  github: string;
+  demo?: string;
+  stars: number;
+  featured: boolean;
+  metrics?: {
+    coverage?: string;
+    tests?: string;
+    bundlesize?: string;
+  };
 }
 
-const formatDate = (dateString?: string) => {
-  if (!dateString) return '';
-  
-  const date = new Date(dateString);
-  if (isNaN(date.getTime())) return '';
-  
-  try {
-    return date.toLocaleDateString('pt-BR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  } catch (error) {
-    console.warn('Erro ao formatar data:', error);
-    return '';
-  }
-};
+interface ProjectItemProps {
+  project: LocalizedProject;
+}
 
-export const ProjectItem: React.FC<ProjectItemProps> = ({
-  title,
-  description,
-  skills,
-  highlights,
-  link,
-  github,
-  stars,
-  updatedAt
-}) => {
+export const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   const intl = useIntl();
-  const formattedDate = formatDate(updatedAt);
-  
+  const {
+    title,
+    localizedSubtitle: subtitle,
+    localizedDescription: description,
+    localizedHighlights: highlights,
+    techStack,
+    github,
+    demo,
+    stars,
+    featured,
+    metrics,
+  } = project;
+
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
+    <Card className={`hover:shadow-lg transition-shadow duration-300 ${featured ? 'ring-2 ring-blue-500/30 dark:ring-blue-400/30' : ''}`}>
       <CardContent className="pt-6">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="font-bold text-lg">
-            {title}
-            <StarButton stars={stars || 0} repoUrl={github} />
-          </h3>
-          <div className="flex gap-2">
-            {link && link !== github && (
-              <Tooltip content={intl.formatMessage({ id: "projects.link.tooltip" })}>
-                <a 
-                  href={link}
+        {/* Screen version */}
+        <div className="print:hidden">
+          <div className="flex justify-between items-start mb-1">
+            <div>
+              <h3 className="font-bold text-lg flex items-center gap-2">
+                {title}
+                <StarButton stars={stars} repoUrl={github} />
+                {featured && (
+                  <span className="inline-flex items-center gap-1 text-xs font-medium bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full">
+                    <Zap size={12} />
+                    Featured
+                  </span>
+                )}
+              </h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                {subtitle}
+              </p>
+            </div>
+            <div className="flex gap-2 shrink-0">
+              {demo && demo !== github && (
+                <Tooltip content={intl.formatMessage({ id: "projects.link.tooltip" })}>
+                  <a
+                    href={demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
+                </Tooltip>
+              )}
+              <Tooltip content={intl.formatMessage({ id: "projects.github.tooltip" })}>
+                <a
+                  href={github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                  className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
                 >
-                  <ExternalLink size={20} />
+                  <Github size={20} />
                 </a>
               </Tooltip>
-            )}
-            <Tooltip content={intl.formatMessage({ id: "projects.github.tooltip" })}>
-              <a 
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
-              >
-                <Github size={20} />
-              </a>
-            </Tooltip>
+            </div>
           </div>
-        </div>
-        {/* Versão normal */}
-        <div className="print:hidden">
-          <div className="flex justify-between items-center mb-3">
-            <p className="text-gray-700 dark:text-gray-300 mb-3">
-              {description}
-            </p>
-          </div>
-          {highlights && highlights.length > 0 && (
+
+          <p className="text-gray-700 dark:text-gray-300 mb-3 mt-2">
+            {description}
+          </p>
+
+          {highlights.length > 0 && (
             <Tooltip content={intl.formatMessage({ id: "projects.highlights.tooltip" })}>
               <div className="mb-3">
                 <h4 className="text-sm font-semibold mb-2">
                   <FormattedMessage id="projects.highlightsLabel" />
                 </h4>
-                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                <ul className="space-y-1.5">
                   {highlights.map((highlight, index) => (
-                    <li key={index} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                      {highlight}
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <CheckCircle2 size={16} className="shrink-0 mt-0.5 text-green-500 dark:text-green-400" />
+                      <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </Tooltip>
           )}
+
+          {metrics && (
+            <div className="flex flex-wrap gap-2 mb-3">
+              {metrics.coverage && (
+                <span className="inline-flex items-center gap-1 text-xs font-medium bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 px-2.5 py-1 rounded-full">
+                  <CheckCircle2 size={12} />
+                  {metrics.coverage}
+                </span>
+              )}
+              {metrics.tests && (
+                <span className="inline-flex items-center gap-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 px-2.5 py-1 rounded-full">
+                  <Zap size={12} />
+                  {metrics.tests}
+                </span>
+              )}
+            </div>
+          )}
+
           <Tooltip content={intl.formatMessage({ id: "projects.skills.tooltip" })}>
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
+              {techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 
-                           px-3 py-1 rounded-full text-sm hover:bg-blue-200 
+                  className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300
+                           px-3 py-1 rounded-full text-sm hover:bg-blue-200
                            dark:hover:bg-blue-800 transition-colors cursor-default"
                 >
-                  {skill}
+                  {tech}
                 </span>
               ))}
             </div>
           </Tooltip>
-          {formattedDate && (
-            <Tooltip content={intl.formatMessage({ id: "projects.date.tooltip" })}>
-              <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
-                <FormattedMessage 
-                  id="projects.lastUpdate" 
-                  values={{ date: formattedDate }} 
-                />
-              </div>
-            </Tooltip>
-          )}
         </div>
 
-        {/* Versão para impressão */}
+        {/* Print version */}
         <div className="hidden print:block">
-          <h3 className="font-bold text-lg text-black mb-2">
+          <h3 className="font-bold text-lg text-black mb-1">
             {title}
-            {stars > 0 && ` (${stars} ⭐)`}
+            {stars > 0 && ` (${stars} \u2B50)`}
+            {featured && ' \u2014 Featured'}
           </h3>
-          
+          <p className="text-sm text-gray-600 mb-2 font-medium">{subtitle}</p>
           <p className="text-gray-800 mb-2">{description}</p>
-          
-          {highlights && highlights.length > 0 && (
+
+          {highlights.length > 0 && (
             <>
               <p className="font-medium mt-2 mb-1">
                 <FormattedMessage id="projects.highlightsLabel" />
@@ -146,26 +170,34 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
             </>
           )}
 
+          {metrics && (metrics.coverage || metrics.tests) && (
+            <p className="text-sm text-gray-600 mb-2">
+              {metrics.coverage && `Coverage: ${metrics.coverage}`}
+              {metrics.coverage && metrics.tests && ' | '}
+              {metrics.tests && `Tests: ${metrics.tests}`}
+            </p>
+          )}
+
           <p className="font-medium mt-2 mb-1">
             <FormattedMessage id="projects.skillsLabel" />
           </p>
           <p className="text-gray-800 mb-2">
-            {skills.join(', ')}
+            {techStack.join(', ')}
           </p>
 
-          {link && link !== github && (
+          {demo && demo !== github && (
             <p className="text-gray-800 text-sm">
-              <FormattedMessage 
-                id="projects.print.link" 
-                values={{ url: link }}
+              <FormattedMessage
+                id="projects.print.link"
+                values={{ url: demo }}
               />
             </p>
           )}
-          
+
           {github && (
             <p className="text-gray-800 text-sm">
-              <FormattedMessage 
-                id="projects.print.github" 
+              <FormattedMessage
+                id="projects.print.github"
                 values={{ url: github }}
               />
             </p>
