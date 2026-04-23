@@ -1,14 +1,10 @@
 {
-  "version": 2,
-  "buildCommand": "vite build",
+  "buildCommand": "tsc && vite build",
   "outputDirectory": "dist",
   "functions": {
     "api/og.tsx": {
       "runtime": "@vercel/node@3.0.0",
       "memory": 1024
     }
-  },
-  "env": {
-    "NODE_VERSION": "18.x"
   }
 }
