@@ -64,6 +64,16 @@ const translations = {
     playwright: 'Playwright',
     pwa: 'PWA',
     lgpd: 'LGPD',
+    vercel: 'Vercel',
+    terraform: 'Terraform',
+    cicd: 'CI/CD',
+    ai: 'Artificial Intelligence',
+    soft: {
+      teamwork: 'Teamwork',
+      communication: 'Communication',
+      learning: 'Continuous Learning',
+      mediation: 'Mediation'
+    },
     category: {
       frontend: 'Frontend',
       backend: 'Backend Development',
@@ -213,21 +223,41 @@ const translations = {
     highlightsLabel: 'Highlights:',
     tesouros: {
       title: 'Tesouros Portal',
-      description: 'Enterprise club management platform with offline-first PWA, gamification, RBAC, and LGPD compliance. Real application with active users.'
+      description: 'Enterprise club management platform with offline-first PWA, gamification, RBAC, and LGPD compliance. Real application with active users.',
+      highlight1: 'Offline-first PWA with IndexedDB synchronization',
+      highlight2: 'Gamification engine with XP, levels, and achievements',
+      highlight3: 'RBAC with 5 access profiles and LGPD compliance'
     },
     ignitecall: {
-      description: 'Scheduling app with Google Calendar OAuth, custom Design System, and automated CI/CD'
+      title: 'IgniteCall',
+      description: 'Scheduling app with Google Calendar OAuth, custom Design System, and automated CI/CD',
+      highlight1: 'Google Calendar OAuth integration with real-time scheduling',
+      highlight2: 'Custom Design System with reusable components',
+      highlight3: 'Automated CI/CD with Codecov and testing'
     },
     devstore: {
       title: 'DevStore',
-      description: 'SSR e-commerce with Stripe payments, product catalog, and responsive design'
+      description: 'SSR e-commerce with Stripe payments, product catalog, and responsive design',
+      highlight1: 'Stripe integration for production payments',
+      highlight2: 'SSR with Next.js for SEO and performance'
     },
     pizzashop: {
       title: 'Pizza Shop',
-      description: 'Delivery app with automated E2E testing (Playwright) and magic link authentication'
+      description: 'Delivery app with automated E2E testing (Playwright) and magic link authentication',
+      highlight1: 'E2E tests with Playwright and unit tests with Vitest',
+      highlight2: 'Passwordless magic link authentication'
+    },
+    forum: {
+      title: 'Forum API',
+      description: 'API built with Domain-Driven Design and Clean Architecture, pure domain layer with automated tests',
+      highlight1: 'DDD architecture with entities, value objects, and use cases',
+      highlight2: '95%+ test coverage with Vitest'
     },
     inorbit: {
-      description: 'REST API with Fastify for weekly goal tracking'
+      title: 'InOrbit API',
+      description: 'REST API with Fastify for weekly goal tracking',
+      highlight1: 'Fastify 5 with Drizzle ORM and PostgreSQL',
+      highlight2: 'Zod validation and Swagger documentation'
     },
     print: {
       link: 'Link: {url}',
@@ -256,6 +286,7 @@ const translations = {
   languages: {
     portuguese: 'Portuguese',
     english: 'English',
+    spanish: 'Spanish',
     title: 'Languages',
     level: {
       native: 'Native',
@@ -266,15 +297,10 @@ const translations = {
     title: 'Education',
     current_subjects: 'Current Subjects',
     future_subjects: 'Upcoming Subjects',
-    description: {
-      fatec: {
-        1: 'Course focused on web and mobile development with emphasis on modern technologies',
-        2: 'Integrative project with local companies for developing real solutions'
-      }
-    },
     degree: {
       technologist: 'Internet Systems Technology',
-      btech: 'Technologist in Systems Analysis and Development'
+      btech: 'Technologist in Systems Analysis and Development',
+      certification: 'Technical Certification'
     },
     institution: {
       fatec: 'Fatec Jahu - Faculty of Technology of Jaú',
@@ -282,11 +308,25 @@ const translations = {
       rocketseat: 'Rocketseat'
     },
     course: {
-      fullstack: 'Full Stack Developer'
+      fullstack: 'Full Stack Developer',
+      ads: 'Systems Analysis and Development',
+      ignite: 'Full Stack Developer'
     },
     period: {
       estacio: 'January 2025 - July 2027',
       rocketseat: 'November 2024 - November 2026'
+    },
+    description: {
+      estacio: {
+        0: 'Technologist in Systems Analysis and Development focused on programming, databases, and software engineering'
+      },
+      rocketseat: {
+        0: 'Full Stack training specializing in React, Node.js, TypeScript, Clean Architecture, and DevOps'
+      },
+      fatec: {
+        1: 'Course focused on web and mobile development with emphasis on modern technologies',
+        2: 'Integrative project with local companies for developing real solutions'
+      }
     }
   }
 };
