@@ -91,7 +91,7 @@ A modern digital resume with internationalization and responsive design.
 
 - **Frontend**:
   - React 18 with TypeScript
-  - Next.js for SSR/SSG
+  - Vite for build tooling
   - TailwindCSS for styling
   - React-Intl for i18n
 
@@ -123,8 +123,8 @@ A modern digital resume with internationalization and responsive design.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/rafaumeu/digital-resume.git
-cd digital-resume
+git clone https://github.com/rafaumeu/cv.git
+cd cv
 ```
 
 2. Install dependencies:
@@ -157,42 +157,11 @@ yarn dev
 
 ## 🚀 Deployment
 
-Deployed on Vercel: [Digital Resume Website](https://rafaeldiaszendroncv-three-inky.vercel.app/)
+Deployed on Vercel: [Digital Resume Website](https://cv-three-inky.vercel.app/)
 
 ---
 
-## ❤️ Sponsors
-
-Thank you to all the individuals and companies supporting my open source projects. Your support enables me to continue developing and maintaining useful tools for the community.
-
-### 🏆 Special Sponsors
-<!-- Special sponsors will be listed here -->
-
-### ✨ How to Support
-
-You can support my work in several ways:
-
-- [Become a sponsor](https://github.com/sponsors/rafaumeu)
-- Give a ⭐️ to repositories you use
-- Share the projects
-- Contribute with code or documentation
-
-### 🎁 Sponsor Benefits
-
-- Priority support via Discord/Email
-- Your name/logo in project READMEs
-- Early access to new features
-- Special mention in major releases
-- Technical consulting (1h/month for Gold+ sponsors)
-
-### 📊 Resource Usage
-
-Resources are used for:
-
-- Project maintenance and evolution
-- New feature development
-- Hosting and infrastructure
-- Content creation and documentation
+---
 
 <div align="center">
 Made with ❤️ by Rafael Dias Zendron
