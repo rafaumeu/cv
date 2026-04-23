@@ -5,8 +5,13 @@ export const languages = [
     code: 'pt-BR'
   },
   {
-    name: 'English',
-    level: 'Intermediate',
+    name: 'Inglês',
+    level: 'Intermediário',
     code: 'en-US'
+  },
+  {
+    name: 'Espanhol',
+    level: 'Básico',
+    code: 'es-ES'
   }
-]; 
+];

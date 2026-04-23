@@ -24,12 +24,7 @@ export const experiences = [
       'experience.achievements.teleperformance.1',
       'experience.achievements.teleperformance.2'
     ],
-    metrics: [
-      'experience.metrics.teleperformance.0',
-      'experience.metrics.teleperformance.1',
-      'experience.metrics.teleperformance.2'
-    ],
-    skills: ['Gestão de Conflitos', 'Comunicação Técnica', 'Resolução de Problemas']
+    skills: ['Mediação', 'Empatia', 'Atendimento ao Cliente', 'Negociação']
   },
   {
     role: 'experience.role.production',
@@ -41,7 +36,7 @@ export const experiences = [
       'experience.achievements.debem.1',
       'experience.achievements.debem.2'
     ],
-    skills: ['Trabalho em Equipe', 'Processos Produtivos', 'Controle de Qualidade']
+    skills: ['Trabalho em Equipe', 'Atenção aos Detalhes', 'Controle de Qualidade']
   },
   {
     role: 'experience.role.analyst',
@@ -51,69 +46,119 @@ export const experiences = [
     achievements: [
       'experience.achievements.tempo.0',
       'experience.achievements.tempo.1',
-      'experience.achievements.tempo.2',
-      'experience.achievements.tempo.3'
+      'experience.achievements.tempo.2'
     ],
-    skills: ['Atendimento ao Cliente', 'Análise de Dados', 'Retenção de Clientes']
+    skills: ['Atendimento ao Cliente', 'Análise de Dados', 'Seguros Automotivos']
   }
 ];
 
 export const projects = [
   {
+    title: 'projects.tesouros.title',
+    description: 'projects.tesouros.description',
+    skills: ['React', 'TypeScript', 'PWA', 'PostgreSQL', 'TailwindCSS'],
+    highlights: [
+      'projects.tesouros.highlight1',
+      'projects.tesouros.highlight2',
+      'projects.tesouros.highlight3'
+    ],
+    link: 'https://github.com/rafaumeu/tesouros-portal',
+    demo: 'https://tesouros-portal.vercel.app'
+  },
+  {
+    title: 'projects.ignitecall.title',
+    description: 'projects.ignitecall.description',
+    skills: ['Next.js', 'TypeScript', 'OAuth', 'Prisma', 'Google APIs'],
+    highlights: [
+      'projects.ignitecall.highlight1',
+      'projects.ignitecall.highlight2',
+      'projects.ignitecall.highlight3'
+    ],
+    link: 'https://github.com/rafaumeu/ignitecall-app',
+    demo: 'https://ignitecall-app.vercel.app'
+  },
+  {
+    title: 'projects.devstore.title',
+    description: 'projects.devstore.description',
+    skills: ['Next.js', 'TypeScript', 'Stripe', 'TailwindCSS', 'SSR'],
+    highlights: [
+      'projects.devstore.highlight1',
+      'projects.devstore.highlight2'
+    ],
+    link: 'https://github.com/rafaumeu/ecommerce-next',
+    demo: 'https://devstorerdz.netlify.app'
+  },
+  {
+    title: 'projects.pizzashop.title',
+    description: 'projects.pizzashop.description',
+    skills: ['React', 'TypeScript', 'TailwindCSS', 'Vitest', 'Playwright'],
+    highlights: [
+      'projects.pizzashop.highlight1',
+      'projects.pizzashop.highlight2'
+    ],
+    link: 'https://github.com/rafaumeu/pizza-shop',
+    demo: 'https://pizza-shop-five-sigma.vercel.app'
+  },
+  {
     title: 'projects.forum.title',
     description: 'projects.forum.description',
-    skills: ['Node.js', 'TypeScript', 'DDD', 'Clean Architecture', 'PostgreSQL'],
-    metrics: [
-      'projects.forum.metrics.0',
-      'projects.forum.metrics.1',
-      'projects.forum.metrics.2'
+    skills: ['TypeScript', 'Node.js', 'DDD', 'Clean Architecture', 'Vitest'],
+    highlights: [
+      'projects.forum.highlight1',
+      'projects.forum.highlight2'
     ],
     link: 'https://github.com/rafaumeu/forum'
   },
   {
     title: 'projects.inorbit.title',
     description: 'projects.inorbit.description',
-    skills: ['React.js', 'TypeScript', 'TailwindCSS', 'Radix UI', 'React Query'],
+    skills: ['Fastify', 'TypeScript', 'Drizzle ORM', 'PostgreSQL', 'Zod'],
     highlights: [
       'projects.inorbit.highlight1',
-      'projects.inorbit.highlight2',
-      'projects.inorbit.highlight3'
+      'projects.inorbit.highlight2'
     ],
-    link: 'https://github.com/rafaumeu/inorbit-front'
-  },
-  {
-    title: 'projects.ignitecall.title',
-    description: 'projects.ignitecall.description',
-    skills: ['Next.js', 'TypeScript', 'Prisma', 'NextAuth.js', 'Google APIs'],
-    highlights: [
-      'projects.ignitecall.highlight1',
-      'projects.ignitecall.highlight2',
-      'projects.ignitecall.highlight3'
-    ],
-    link: 'https://github.com/rafaumeu/ignite-call'
+    link: 'https://github.com/rafaumeu/inorbit-api'
   }
 ];
 
 export const skills = {
+  frontend: [
+    'skills.reactjs',
+    'skills.nextjs',
+    'skills.typescript',
+    'skills.tailwindcss',
+    'skills.html5',
+    'skills.css3',
+    'skills.javascript'
+  ],
   backend: [
     'skills.nodejs',
-    'skills.expressjs',
-    'skills.nestjs',
     'skills.fastify',
     'skills.postgresql',
-    'skills.mongodb',
-    'skills.redis',
-    'skills.jwt-auth'
+    'skills.prisma',
+    'skills.drizzle',
+    'skills.rest-api'
   ],
   architecture: [
     'skills.clean-architecture',
     'skills.ddd',
-    'skills.rest-api'
+    'skills.tdd'
+  ],
+  devops: [
+    'skills.docker',
+    'skills.git',
+    'skills.vercel'
+  ],
+  testing: [
+    'skills.vitest',
+    'skills.playwright',
+    'skills.testing-library'
   ],
   soft: [
     'skills.soft.teamwork',
     'skills.soft.communication',
-    'skills.soft.learning'
+    'skills.soft.learning',
+    'skills.soft.mediation'
   ]
 };
 
@@ -122,47 +167,121 @@ export const certifications = [
     title: 'Node.js e Backend Development',
     issuer: 'Rocketseat',
     year: 2024,
-    skills: [
-      'skills.nodejs',
-      'skills.typescript',
-      'skills.clean-architecture',
-      'skills.ddd',
-      'skills.rest-api',
-      'skills.jwt-auth'
-    ],
-    link: 'https://app.rocketseat.com.br/certificates/ad52c13b-44e5-4cfa-aced-0db19184e28e'
+    skills: ['skills.nodejs', 'skills.typescript', 'skills.rest-api']
   },
   {
-    title: 'NestJS Framework',
+    title: 'ReactJS',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.reactjs', 'skills.typescript']
+  },
+  {
+    title: 'Aprofundando em Next.js',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.nextjs', 'skills.reactjs']
+  },
+  {
+    title: 'Fundamentos do React',
     issuer: 'Rocketseat',
     year: 2024,
-    skills: [
-      'skills.nestjs',
-      'skills.typescript',
-      'skills.postgresql',
-      'skills.mongodb'
-    ],
-    link: 'https://app.rocketseat.com.br/certificates/e4c15186-1a42-4f44-b327-554036bf400a'
+    skills: ['skills.reactjs', 'skills.javascript']
   },
   {
-    title: 'Docker e DevOps',
+    title: 'Fundamentos do Next.js',
     issuer: 'Rocketseat',
-    year: 2025,
-    skills: [
-      'skills.docker',
-      'skills.cicd'
-    ],
-    link: 'https://app.rocketseat.com.br/certificates/a5a42e68-ac42-4fac-b98e-c29f7d00dcca'
+    year: 2024,
+    skills: ['skills.nextjs', 'skills.reactjs']
   },
   {
-    title: 'Comunicação e Metodologias Ágeis',
+    title: 'DDD no Node.js',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.ddd', 'skills.nodejs', 'skills.clean-architecture']
+  },
+  {
+    title: 'Containers com Docker e Docker Compose',
     issuer: 'Rocketseat',
     year: 2025,
-    skills: [
-      'skills.soft.communication',
-      'skills.soft.teamwork'
-    ],
-    link: 'https://app.rocketseat.com.br/certificates/a6dfccf8-d059-426e-8930-9697b8b17dec'
+    skills: ['skills.docker']
+  },
+  {
+    title: 'IAC com Terraform',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.terraform']
+  },
+  {
+    title: 'Design System',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.reactjs', 'skills.typescript']
+  },
+  {
+    title: 'Metodologias Ágeis',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.soft.teamwork', 'skills.soft.communication']
+  },
+  {
+    title: 'Aprofundando em Hooks',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.reactjs']
+  },
+  {
+    title: 'HTTP e Performance',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.rest-api']
+  },
+  {
+    title: 'Integrando Frontend e Backend',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.reactjs', 'skills.nodejs']
+  },
+  {
+    title: 'NestJS',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.nodejs', 'skills.typescript']
+  },
+  {
+    title: 'Fundamentos da Cultura DevOps',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.docker', 'skills.cicd']
+  },
+  {
+    title: 'Comunicação Assertiva',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.soft.communication']
+  },
+  {
+    title: 'Posicionamento nas Redes Sociais',
+    issuer: 'Rocketseat',
+    year: 2024,
+    skills: ['skills.soft.communication']
+  },
+  {
+    title: 'Desenvolvendo Chatbots',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.ai']
+  },
+  {
+    title: 'Otimizando LLMs com Fine Tuning',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.ai']
+  },
+  {
+    title: 'Otimizando LLMs com RAG',
+    issuer: 'Rocketseat',
+    year: 2025,
+    skills: ['skills.ai']
   }
 ];
 
@@ -174,19 +293,31 @@ export const languages = [
   {
     name: 'languages.english',
     level: 'Intermediário'
+  },
+  {
+    name: 'languages.spanish',
+    level: 'Básico'
   }
 ];
 
 export const education: EducationItem[] = [
   {
-    degree: 'education.degree.technologist',
+    degree: 'education.degree.btech',
+    institution: 'education.institution.estacio',
+    course: 'education.course.ads',
+    period: 'education.period.estacio',
+    description: [
+      'education.description.estacio.0'
+    ],
+    subjects: []
+  },
+  {
+    degree: 'education.degree.certification',
     institution: 'education.institution.rocketseat',
     course: 'education.course.ignite',
-    period: 'education.period.ignite',
+    period: 'education.period.rocketseat',
     description: [
-      'education.course.description.0',
-      'education.course.description.1',
-      'education.course.description.2'
+      'education.description.rocketseat.0'
     ],
     subjects: []
   }
@@ -202,7 +333,6 @@ export const getProjectsForProfile = (githubProjects: GithubProject[]) => {
   }));
 };
 
-// Função auxiliar para pegar o perfil atual
 export const getCurrentProfile = (profile: ProfileType) => {
   return profiles[profile];
 };

@@ -21,9 +21,9 @@ const translations = {
   summary: {
     title: 'Sobre',
     description: {
-      backend: 'Desenvolvedor Backend Junior com base sólida em Node.js e TypeScript. Experiência prática com Express, NestJS e Fastify, junto com bancos de dados SQL (PostgreSQL) e NoSQL (MongoDB, Redis). Proficiente em desenvolvimento de APIs REST, autenticação JWT e práticas de Clean Architecture e DDD. Certificado em metodologias ágeis pela Rocketseat, com foco em qualidade de código e testes automatizados. Comprometido com aprendizado contínuo e trabalho em equipe.',
-      frontend: 'Desenvolvedor Frontend Junior com base sólida em React e TypeScript. Experiência com Next.js, Tailwind CSS e React Native para construção de interfaces responsivas e acessíveis. Conhecimento em testes com React Testing Library e Vitest. Foco em performance, SEO e melhores práticas de desenvolvimento frontend. Comprometido com código limpo e experiência do usuário.',
-      fullstack: 'Desenvolvedor Full Stack Junior com experiência em React e Node.js. Capaz de desenvolver aplicações end-to-end usando TypeScript e práticas modernas de desenvolvimento. Experiência com Next.js, Express, bancos de dados SQL/NoSQL e implantações em nuvem. Conhecimento em CI/CD, Docker e metodologias ágeis. Habilidade em trabalhar em todas as camadas da aplicação mantendo código limpo e testável.'
+      backend: 'Desenvolvedor Backend com experiência em Node.js, TypeScript, Fastify e PostgreSQL. Desenvolve APIs REST com Clean Architecture, DDD e testes automatizados. Experiência com Drizzle ORM, Prisma e integração de serviços. Foco em qualidade de código e arquitetura escalável.',
+      frontend: 'Desenvolvedor Frontend com experiência em React, Next.js, TypeScript e TailwindCSS. Constrói interfaces responsivas e acessíveis com foco em performance e SEO. Experiência com PWA, testes E2E (Playwright) e Design Systems. Comprometido com experiência do usuário e código limpo.',
+      fullstack: 'Desenvolvedor Full Stack com experiência em React, Node.js e TypeScript. Constrói aplicações end-to-end usando Next.js, Fastify, PostgreSQL e práticas modernas. Experiência com PWA, gamificação, conformidade LGPD, testes automatizados e CI/CD. Comprometido com código limpo, Clean Architecture e aprendizado contínuo.'
     }
   },
   skills: {
@@ -42,17 +42,13 @@ const translations = {
     nestjs: 'NestJS',
     fastify: 'Fastify',
     postgresql: 'PostgreSQL',
-    mongodb: 'MongoDB',
-    redis: 'Redis',
     'jwt-auth': 'Autenticação JWT',
     docker: 'Docker',
     git: 'Git',
     'github-actions': 'GitHub Actions',
-    aws: 'AWS',
     'clean-architecture': 'Clean Architecture',
     'clean-code': 'Clean Code',
     'rest-api': 'API REST',
-    microservices: 'Microsserviços',
     ddd: 'Domain-Driven Design',
     tdd: 'Test-Driven Development',
     'responsive-design': 'Design Responsivo',
@@ -64,6 +60,11 @@ const translations = {
     github: 'GitHub',
     vscode: 'VS Code',
     figma: 'Figma',
+    prisma: 'Prisma ORM',
+    drizzle: 'Drizzle ORM',
+    playwright: 'Playwright',
+    pwa: 'PWA',
+    lgpd: 'LGPD',
     title: 'Competências',
     category: {
       frontend: 'Frontend',
@@ -93,27 +94,46 @@ const translations = {
       frontend: 'Desenvolvedor Frontend',
       backend: 'Desenvolvedor Backend',
       fullstack: 'Desenvolvedor Full Stack',
-      expert: 'Especialista Técnico',
-      customer: 'Especialista em Experiência do Cliente',
-      production: 'Assistente de Produção de Tintas',
-      analyst: 'Analista de Suporte'
+      expert: 'Especialista em Interação',
+      production: 'Assistente de Produção',
+      analyst: 'Analista de Atendimento',
+      analyst2: 'Analista de Transporte',
+      distribution: 'Auxiliar de Distribuição',
+      telemarketing: 'Operador de Telemarketing',
+      feeder: 'Alimentador de Linha de Produção',
+      footwear: 'Auxiliar de Calçados'
     },
     company: {
       self: 'Desenvolvimento Independente & Iniciativas Open Source',
       debem: 'De Bem Tintas',
       teleperformance: 'Teleperformance',
-      tempo: 'Tempo Assist'
+      tempo: 'Tempo Assist',
+      randstad: 'Randstad Brasil',
+      jobwork: 'Agência Job Work',
+      parla: 'Parla Contact Center',
+      dino: 'Dino Formas',
+      mantelli: 'F. Mantelli Calçados'
     },
     period: {
       debem: 'Fevereiro 2021 - Dezembro 2023',
       teleperformance: 'Julho 2024 - Novembro 2024',
-      tempo: 'Janeiro 2020 - Dezembro 2020'
+      tempo: 'Março 2015 - Junho 2020',
+      randstad: 'Setembro 2014 - Dezembro 2014',
+      jobwork: 'Maio 2014 - Agosto 2014',
+      parla: 'Março 2014 - Abril 2014',
+      dino: 'Julho 2013 - Setembro 2013',
+      mantelli: 'Fevereiro 2013 - Maio 2013'
     },
     location: {
       debem: 'Jaú, São Paulo',
       teleperformance: 'Remoto, Brasil',
       tempo: 'São Paulo, Brasil',
-      remote: 'Remoto, Brasil'
+      remote: 'Remoto, Brasil',
+      randstad: 'Cajamar, São Paulo',
+      jobwork: 'Cajamar, São Paulo',
+      parla: 'Barueri, São Paulo',
+      dino: 'Barueri, São Paulo',
+      mantelli: 'Jaú, São Paulo'
     },
     achievements: {
       title: 'Principais Realizações',
@@ -132,22 +152,36 @@ const translations = {
         2: 'Implementação de arquitetura de microsserviços',
         3: 'Otimização de performance e SEO em aplicações React'
       },
-      tempo: {
-        0: 'Excelência no atendimento ao cliente',
-        1: 'Análise de dados e relatórios',
-        2: 'Otimização de processos',
-        3: 'Colaboração em equipe'
-      },
       teleperformance: {
-        0: 'Suporte técnico especializado para usuários de software',
-        1: 'Resolução eficiente de problemas complexos',
-        2: 'Treinamento e mentoria de novos membros da equipe'
+        0: 'Mediação de conflitos entre compradores e vendedores',
+        1: 'Atendimento ao cliente com empatia e resolução de problemas',
+        2: 'Negociação e comunicação assertiva'
       },
       debem: {
-        0: 'Otimização dos processos de produção',
+        0: 'Produção de acabamentos para construção civil',
         1: 'Controle de qualidade e padronização',
-        2: 'Redução de desperdício e custos operacionais'
+        2: 'Trabalho em equipe e atenção aos detalhes'
       },
+      tempo: {
+        0: 'Atendimento ao cliente de seguros Tokyo Marine',
+        1: 'Análise de sinistros e processos de seguros',
+        2: 'Trabalho em equipe e relatórios analíticos'
+      },
+      randstad: {
+        0: 'Triagem de produtos no centro de distribuição'
+      },
+      jobwork: {
+        0: 'Logística de carregamento e descarga'
+      },
+      parla: {
+        0: 'Vendas de seguros por telefone'
+      },
+      dino: {
+        0: 'Produção de fôrmas para construção'
+      },
+      mantelli: {
+        0: 'Montagem de calçados em linha de produção'
+      }
     },
     metrics: {
       title: 'Métricas Chave',
@@ -173,6 +207,24 @@ const translations = {
     github: 'GitHub',
     skillsLabel: 'Tecnologias:',
     highlightsLabel: 'Destaques:',
+    tesouros: {
+      title: 'Tesouros Portal',
+      description: 'Plataforma enterprise de gestão de clube com PWA offline-first, gamificação, RBAC e conformidade LGPD. Aplicação real com usuários ativos.'
+    },
+    ignitecall: {
+      description: 'App de agendamento com Google Calendar OAuth, Design System próprio e CI/CD automatizado'
+    },
+    devstore: {
+      title: 'DevStore',
+      description: 'E-commerce SSR com pagamentos Stripe, catálogo de produtos e design responsivo'
+    },
+    pizzashop: {
+      title: 'Pizza Shop',
+      description: 'App de delivery com testes E2E automatizados (Playwright) e autenticação via magic link'
+    },
+    inorbit: {
+      description: 'API REST com Fastify para rastreamento de metas semanais'
+    },
     print: {
       link: 'Link: {url}',
       github: 'Código fonte: {url}'
@@ -217,10 +269,20 @@ const translations = {
       }
     },
     degree: {
-      technologist: 'Tecnólogo em Sistemas para Internet'
+      technologist: 'Tecnólogo em Sistemas para Internet',
+      btech: 'Tecnólogo em Análise e Desenvolvimento de Sistemas'
     },
     institution: {
-      fatec: 'Fatec Jahu - Faculdade de Tecnologia de Jaú'
+      fatec: 'Fatec Jahu - Faculdade de Tecnologia de Jaú',
+      estacio: 'Estácio',
+      rocketseat: 'Rocketseat'
+    },
+    course: {
+      fullstack: 'Full Stack Developer'
+    },
+    period: {
+      estacio: 'Janeiro 2025 - Julho 2027',
+      rocketseat: 'Novembro 2024 - Novembro 2026'
     }
   }
 };
