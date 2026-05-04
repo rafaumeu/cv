@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss) ![i18n](https://img.shields.io/badge/i18n-26C6DA?style=for-the-badge)
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react" alt="React"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/> <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite" alt="Vite"/> <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss" alt="TailwindCSS"/> <img src="https://img.shields.io/badge/i18n-26C6DA?style=for-the-badge" alt="i18n"/>
 </p>
 
 ## Overview
