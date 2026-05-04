@@ -25,7 +25,7 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) =
             // Verifica se existe tradução para a skill
             intl.formatMessage({ id: skill });
             return (
-              <div key={index} className="bg-card-light dark:bg-card-dark p-2 print:p-1 rounded print:text-sm">
+              <div key={index} className="bg-card text-card-foreground p-2 print:p-1 rounded print:text-sm">
                 <span className="text-sm print:text-xs">
                   <FormattedMessage id={skill} />
                 </span>

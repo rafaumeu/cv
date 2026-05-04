@@ -16,7 +16,7 @@ export const ProfileSelector = ({ currentProfile, onProfileChange }: ProfileSele
         id="profile-select"
         value={currentProfile}
         onChange={(e) => onProfileChange(e.target.value as keyof typeof profiles)}
-        className="bg-card-light dark:bg-card-dark rounded px-2 py-1 text-sm"
+        className="bg-card text-card-foreground rounded px-2 py-1 text-sm"
       >
         {Object.keys(profiles).map((profile) => (
           <option key={profile} value={profile}>
