@@ -27,6 +27,6 @@ jobs:
           npm run test:coverage
 
       - name: Bundle Size Check
-        uses: preactjs/compressed-size-action@v2
+        uses: preactjs/compressed-size-action@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
