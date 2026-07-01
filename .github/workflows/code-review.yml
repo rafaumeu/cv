@@ -8,7 +8,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
 
       - name: Code Quality Check
         uses: reviewdog/action-eslint@v1
